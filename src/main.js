@@ -1,16 +1,17 @@
 const mobileItems = document.querySelectorAll(".mobile-item");
 const hamburger = document.getElementById("hamburger");
 const closeMenu = document.getElementById("close-menu");
+const mobileMenu = document.getElementById("mobile-menu");
 
 let isOpen = false;
 
 const openMobileMenu = () => {
-  document.getElementById("mobile-menu").style.height = "100%";
+  mobileMenu.style.height = "100%";
   isOpen = true;
 };
 
 const closeMobileMenu = () => {
-  document.getElementById("mobile-menu").style.height = 0;
+  mobileMenu.style.height = 0;
   isOpen = false;
 };
 
