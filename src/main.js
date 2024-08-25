@@ -1,9 +1,34 @@
-document.addEventListener("mousemove", (e) => {
-  const x = (e.clientX / window.innerWidth) * 100;
-  const y = (e.clientY / window.innerHeight) * 100;
+const mobileItems = document.querySelectorAll(".mobile-item");
+const hamburger = document.getElementById("hamburger");
+const closeMenu = document.getElementById("close-menu");
 
-  const { documentElement } = document;
+let isOpen = false;
 
-  documentElement.style.setProperty("--x", `${x}%`);
-  documentElement.style.setProperty("--y", `${y}%`);
+const openMobileMenu = () => {
+  document.getElementById("mobile-menu").style.height = "100%";
+  isOpen = true;
+};
+
+const closeMobileMenu = () => {
+  document.getElementById("mobile-menu").style.height = 0;
+  isOpen = false;
+};
+
+hamburger.addEventListener("click", () => {
+  isOpen ? closeMobileMenu() : openMobileMenu();
+});
+
+closeMenu.addEventListener("click", () => {
+  closeMobileMenu();
+});
+
+mobileItems.forEach((item) => {
+  item.addEventListener("click", (event) => {
+    mobileItems.forEach((item) => {
+      item.parentElement.classList.remove("bg-blue-400");
+    });
+
+    event.target.parentElement.parentElement.classList.toggle("bg-blue-400");
+    closeMobileMenu();
+  });
 });

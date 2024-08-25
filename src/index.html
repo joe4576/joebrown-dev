@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth scroll-py-20">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -15,15 +15,227 @@
     <title>Joe Brown | Full Stack Software Engineer</title>
   </head>
   <body
-    class="min-h-screen max-w-[1024px] mx-auto flex flex-col gap-4 items-center justify-start sm:justify-center p-10 sm:p-20 bg-[#37474f]"
+    class="min-h-screen max-w-[1024px] mx-auto flex flex-col gap-4 justify-start p-4 sm:p-20 mt-14 sm:mt-0 bg-primary relative"
   >
+    <!-- Main Menu -->
     <div
-      class="w-full rounded-lg p-2 text-center font-semibold shadow-md bg-[#ff9800]"
+      class="bg-slate-400 w-full h-12 sticky top-0 rounded-lg shadow-md hidden md:block"
     >
-      Work in progress 🔧
+      <nav class="flex flex-col justify-center h-full">
+        <ul class="grid grid-cols-4 text-center px-12">
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#experience">Experience</a>
+          </li>
+          <li>
+            <a href="#education">Education</a>
+          </li>
+          <li>
+            <a href="#contact-me">Contact Me</a>
+          </li>
+        </ul>
+      </nav>
     </div>
+
+    <!-- Mobile Menu -->
+    <div class="w-full fixed top-0 left-0 flex md:hidden flex-col shadow-lg">
+      <!-- Hamburger -->
+      <div
+        id="hamburger"
+        class="bg-tertiary flex justify-end items-center py-1 pr-4 h-14"
+      >
+        <div
+          class="hover:bg-white/30 rounded-full h-10 w-10 flex justify-center items-center"
+        >
+          <img
+            class="text-blue-600 h-8 cursor-pointer"
+            src="/icons/menu.svg"
+            alt="Hamburger menu"
+          />
+        </div>
+      </div>
+
+      <!-- Menu Items -->
+      <div
+        id="mobile-menu"
+        class="w-full fixed top-14 right-0 z-10 overflow-y-hidden duration-[400ms] h-0"
+      >
+        <nav id="mobile-nav" class="bg-red-300 shadow-lg">
+          <ul class="flex flex-col justify-center">
+            <li class="hover:bg-gray-300">
+              <a href="#about" class="mobile-item">
+                <div class="w-full h-full p-4">About</div>
+              </a>
+            </li>
+            <li class="hover:bg-gray-300">
+              <a href="#experience" class="mobile-item">
+                <div class="w-full h-full p-4">Experience</div>
+              </a>
+            </li>
+            <li class="hover:bg-gray-300">
+              <a href="#education" class="mobile-item">
+                <div class="w-full h-full p-4">Education</div>
+              </a>
+            </li>
+            <li class="hover:bg-gray-300">
+              <a href="#contact-me" class="mobile-item">
+                <div class="w-full h-full p-4">Contact me</div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div id="close-menu" class="bg-transparent h-full"></div>
+      </div>
+    </div>
+
     <div
-      class="w-full rounded-lg p-8 text-white shadow-md hover:shadow-lg bg-radial-gradient"
+      id="about"
+      class="w-full rounded-lg p-8 text-white shadow-md hover:shadow-lg bg-secondary"
+    >
+      <h1 class="text-3xl font-bold">About</h1>
+      <h2 class="text-xl">Full Stack Software Engineer</h2>
+      <br />
+      <ul class="text-lg font-semibold">
+        <li class="mb-2">
+          <a
+            class="hover:underline"
+            href="https://github.com/joe4576"
+            target="_blank"
+          >
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a
+            class="hover:underline"
+            href="https://www.linkedin.com/in/joe-brown-282196213/"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div
+      id="experience"
+      class="w-full rounded-lg p-8 text-white shadow-md hover:shadow-lg bg-secondary"
+    >
+      <h1 class="text-3xl font-bold">Experience</h1>
+      <h2 class="text-xl">Full Stack Software Engineer</h2>
+      <br />
+      <ul class="text-lg font-semibold">
+        <li class="mb-2">
+          <a
+            class="hover:underline"
+            href="https://github.com/joe4576"
+            target="_blank"
+          >
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a
+            class="hover:underline"
+            href="https://www.linkedin.com/in/joe-brown-282196213/"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div
+      id="education"
+      class="w-full rounded-lg p-8 text-white shadow-md hover:shadow-lg bg-secondary"
+    >
+      <h1 class="text-3xl font-bold">Education</h1>
+      <h2 class="text-xl">Full Stack Software Engineer</h2>
+      <br />
+      <ul class="text-lg font-semibold">
+        <li class="mb-2">
+          <a
+            class="hover:underline"
+            href="https://github.com/joe4576"
+            target="_blank"
+          >
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a
+            class="hover:underline"
+            href="https://www.linkedin.com/in/joe-brown-282196213/"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div
+      id="contact-me"
+      class="w-full rounded-lg p-8 text-white shadow-md hover:shadow-lg bg-secondary"
+    >
+      <h1 class="text-3xl font-bold">Conact Me</h1>
+      <h2 class="text-xl">Full Stack Software Engineer</h2>
+      <br />
+      <ul class="text-lg font-semibold">
+        <li class="mb-2">
+          <a
+            class="hover:underline"
+            href="https://github.com/joe4576"
+            target="_blank"
+          >
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a
+            class="hover:underline"
+            href="https://www.linkedin.com/in/joe-brown-282196213/"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div
+      class="w-full rounded-lg p-8 text-white shadow-md hover:shadow-lg bg-secondary"
+    >
+      <h1 class="text-3xl font-bold">Joe Brown</h1>
+      <h2 class="text-xl">Full Stack Software Engineer</h2>
+      <br />
+      <ul class="text-lg font-semibold">
+        <li class="mb-2">
+          <a
+            class="hover:underline"
+            href="https://github.com/joe4576"
+            target="_blank"
+          >
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a
+            class="hover:underline"
+            href="https://www.linkedin.com/in/joe-brown-282196213/"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div
+      class="w-full rounded-lg p-8 text-white shadow-md hover:shadow-lg bg-secondary"
     >
       <h1 class="text-3xl font-bold">Joe Brown</h1>
       <h2 class="text-xl">Full Stack Software Engineer</h2>

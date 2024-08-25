@@ -8,9 +8,10 @@ export default {
       fontFamily: {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
-      backgroundImage: {
-        "radial-gradient":
-          "radial-gradient(circle at var(--x, 50%) var(--y, 50%), #4c616b, #455a64 60%)",
+      colors: {
+        primary: "#2c4553",
+        secondary: "#486c7e",
+        tertiary: "#557b8f",
       },
     },
   },
