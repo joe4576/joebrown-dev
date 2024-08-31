@@ -24,12 +24,7 @@ closeMenu.addEventListener("click", () => {
 });
 
 mobileItems.forEach((item) => {
-  item.addEventListener("click", (event) => {
-    mobileItems.forEach((item) => {
-      item.parentElement.classList.remove("bg-blue-400");
-    });
-
-    event.target.parentElement.parentElement.classList.toggle("bg-blue-400");
+  item.addEventListener("click", () => {
     closeMobileMenu();
   });
 });

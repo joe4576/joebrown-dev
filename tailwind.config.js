@@ -9,9 +9,8 @@ export default {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: "#2c4553",
-        secondary: "#486c7e",
-        tertiary: "#557b8f",
+        primary: "#212121",
+        secondary: "#333A3F",
       },
     },
   },
