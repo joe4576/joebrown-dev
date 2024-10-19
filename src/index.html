@@ -30,8 +30,8 @@
 
     <title>Joe Brown | Full Stack Software Engineer</title>
   </head>
-  <body class="min-h-screen max-w-[1024px] mx-auto bg-primary relative">
-    <header class="w-full fixed top-0 left-0 shadow-lg bg-secondary h-14">
+  <body class="min-h-screen max-w-5xl mx-auto bg-primary relative">
+    <header class="w-full fixed top-0 left-0 shadow-lg bg-secondary h-14 z-50">
       <div
         class="h-full max-w-[1280px] mx-auto px-4 hidden sm:grid sm:grid-cols-[20%,1fr,20%] sm:place-items-center"
       >
@@ -119,310 +119,376 @@
       </section>
 
       <section id="about" class="card">
-        <h1 class="title">About me</h1>
-        <div class="flex items-center mb-2 text-white/65">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24px"
-            viewBox="0 -960 960 960"
-            width="24px"
-            fill="currentColor"
-          >
-            <path
-              d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"
-            />
-          </svg>
-          <a
-            href="https://www.google.com/maps/place/Stoke-on-Trent"
-            target="_blank"
-            class="text-xl hover:underline ml-1 py-1"
-          >
-            Stoke-on-Trent, UK
-          </a>
+        <div class="header">
+          <h1 class="title">Joe Brown - Full Stack Developer</h1>
+          <div class="flex items-center justify-center text-white/65">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="currentColor"
+            >
+              <path
+                d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"
+              />
+            </svg>
+            <a
+              href="https://www.google.com/maps/place/Stoke-on-Trent"
+              target="_blank"
+              class="text-xl hover:underline ml-1"
+            >
+              Stoke-on-Trent, UK
+            </a>
+          </div>
         </div>
-        <p>
-          I'm Joe Brown, a 23 year old full-stack web developer with a primary
-          focus on the front-end.
-        </p>
-        <br />
-        <p>
-          I specialise in Vue, React, and TypeScript, and I'm passionate about
-          creating high-quality, scalable solutions.
-        </p>
-        <br />
-        <p>
-          My enthusiasm for web development drives me to stay at the forefront
-          of emerging technologies while maintaining a deep understanding of
-          core principles.
-        </p>
-        <br />
-        <p>
-          Software development has always been a keen interest of mine. I have
-          been experimenting with all sorts of programming languages since I was
-          12 years old, in areas including web development, game development,
-          and mobile application development.
-        </p>
-        <br />
-        <p>
-          One of my proudest achievements is a mobile game I created, at 15
-          years old, using Unity. It has garnered over 600,000 downloads on the
-          Google Play Store - during its peak, I was receiving over 50,000
-          downloads per month.
-        </p>
-        <br />
-        <p>
-          I am committed to writing clean, maintainable code and continuously
-          improving my skill set to ensure I provide the best possible
-          solutions.
-        </p>
+
+        <hr class="divider" />
+
+        <div class="list-container">
+          <div class="list-item-wrapper">
+            <div class="list-item-body">
+              <p>
+                I'm Joe Brown, a 23 year old full-stack web developer who
+                specialises in the front-end.
+              </p>
+              <p>
+                I'm passionate about Vue and React, and have professional
+                experience with both. I'm also a very strong proponent of
+                TypeScript.
+              </p>
+              <p>
+                Software development has always been a keen interest of mine. I
+                have been experimenting with all sorts of programming languages
+                since I was 12 years old, in areas including web development,
+                game development, and mobile application development.
+              </p>
+              <p>
+                One of my proudest achievements is a mobile game I created, at
+                15 years old, using Unity. It has garnered over 600,000
+                downloads on the Google Play Store. During its peak, I was
+                receiving over 50,000 downloads per month.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="experience" class="card">
-        <h1 class="title">Experience</h1>
-        <h2 class="text-xl">
-          <a
-            href="https://givenergy.co.uk/"
-            target="_blank"
-            class="hover:underline"
-          >
-            ⚡️ GivEnergy
-          </a>
-        </h2>
-        <h3
-          id="current-job-tenure"
-          class="text-white/65 mb-2"
-          data-start-date="2024-03-05"
-        >
-          March 2024 - Present
-        </h3>
-        <div class="flex flex-wrap gap-2 w-full my-4">
-          <a href="https://react.dev/" target="_blank">
-            <div
-              class="chip border-[#61dafb] hover:bg-[#61dafb] hover:bg-opacity-20"
-            >
-              <img src="/icons/react.svg" alt="React Logo" class="icon" />
-              <span>React</span>
-            </div>
-          </a>
-
-          <a href="https://www.typescriptlang.org/" target="_blank">
-            <div
-              class="chip border-[#3178c6] hover:bg-[#3178c6] hover:bg-opacity-20"
-            >
-              <img
-                src="/icons/typescript.svg"
-                alt="TypeScript Logo"
-                class="icon"
-              />
-              <span>TypeScript</span>
-            </div>
-          </a>
-
-          <a href="https://nodejs.org/" target="_blank">
-            <div
-              class="chip border-[#5fa04e] hover:bg-[#5fa04e] hover:bg-opacity-20"
-            >
-              <img src="/icons/node.svg" alt="Node.js Logo" class="icon" />
-              <span>Node.js</span>
-            </div>
-          </a>
-
-          <a href="https://tailwindcss.com/" target="_blank">
-            <div
-              class="chip border-[#38bdf8] hover:bg-[#38bdf8] hover:bg-opacity-20"
-            >
-              <img src="/icons/tailwind.svg" alt="Tailwind Logo" class="icon" />
-              <span>Tailwind</span>
-            </div>
-          </a>
-
-          <a href="https://ionicframework.com/" target="_blank">
-            <div
-              class="chip border-[#3880ff] hover:bg-[#3880ff] hover:bg-opacity-20"
-            >
-              <img src="/icons/ionic.svg" alt="Ionic Logo" class="icon" />
-              <span>Ionic</span>
-            </div>
-          </a>
-
-          <a href="https://capacitorjs.com/" target="_blank">
-            <div
-              class="chip border-[#53b9ff] hover:bg-[#53b9ff] hover:bg-opacity-20"
-            >
-              <img
-                src="/icons/capacitor.svg"
-                alt="Capacitor Logo"
-                class="icon"
-              />
-              <span>Capacitor</span>
-            </div>
-          </a>
-
-          <a href="https://aws.amazon.com/" target="_blank">
-            <div
-              class="chip border-[#ff9900] hover:bg-[#ff9900] hover:bg-opacity-20"
-            >
-              <img src="/icons/aws.svg" alt="AWS Logo" class="icon" />
-              <span>AWS</span>
-            </div>
-          </a>
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-          asperiores alias, labore quia cupiditate commodi animi similique
-          voluptatem rerum, eaque quo aperiam dolor vel numquam repellat soluta
-          temporibus quod quam!
-        </p>
-
-        <hr class="my-4 border-white/10" />
-
-        <h2 class="text-xl">
-          <a
-            href="https://www.premiersystems.com/"
-            target="_blank"
-            class="hover:underline"
-          >
-            🍻 Premier Systems
-          </a>
-        </h2>
-        <h3 class="text-white/65 mb-2">
-          July 2021 - February 2024 (2 yrs 8 mos)
-        </h3>
-        <div class="flex flex-wrap gap-2 w-full my-4">
-          <a href="https://vuejs.org/" target="_blank">
-            <div
-              class="chip border-[#42b883] hover:bg-[#42b883] hover:bg-opacity-20"
-            >
-              <img src="/icons/vue-logo.svg" alt="Vue Logo" class="icon" />
-              <span>Vue</span>
-            </div>
-          </a>
-
-          <a href="https://www.typescriptlang.org/" target="_blank">
-            <div
-              class="chip border-[#3178c6] hover:bg-[#3178c6] hover:bg-opacity-20"
-            >
-              <img
-                src="/icons/typescript.svg"
-                alt="TypeScript Logo"
-                class="icon"
-              />
-              <span>TypeScript</span>
-            </div>
-          </a>
-
-          <a href="https://vuetifyjs.com/" target="_blank">
-            <div
-              class="chip border-[#1697F6] hover:bg-[#1697F6] hover:bg-opacity-20"
-            >
-              <img src="/icons/vuetify.svg" alt="Vuetify Logo" class="icon" />
-              <span>Vuetify</span>
-            </div>
-          </a>
-
-          <a
-            href="https://learn.microsoft.com/en-us/dotnet/csharp/"
-            target="_blank"
-          >
-            <div
-              class="chip border-[#927be5] hover:bg-[#927be5] hover:bg-opacity-20"
-            >
-              <img src="/icons/c-sharp.svg" alt="C# Logo" class="icon" />
-              <span>C#</span>
-            </div>
-          </a>
-
-          <a href="https://cloud.google.com/" target="_blank">
-            <div
-              class="chip border-[#4285f4] hover:bg-[#4285f4] hover:bg-opacity-20"
-            >
-              <img src="/icons/google-cloud.svg" alt="GCP Logo" class="icon" />
-              <span>Google Cloud</span>
-            </div>
-          </a>
-
-          <a href="https://www.postgresql.org/" target="_blank">
-            <div
-              class="chip border-[#336791] hover:bg-[#336791] hover:bg-opacity-20"
-            >
-              <img
-                src="/icons/postgresql.svg"
-                alt="PostgreSQL Logo"
-                class="icon"
-              />
-              <span>PostgreSQL</span>
-            </div>
-          </a>
-
-          <a href="https://www.docker.com/" target="_blank">
-            <div
-              class="chip border-[#1d63ed] hover:bg-[#1d63ed] hover:bg-opacity-20"
-            >
-              <img src="/icons/docker.svg" alt="Docker Logo" class="h-5 w-5" />
-              <span>Docker</span>
-            </div>
-          </a>
+        <div class="header">
+          <h1 class="title">Experience</h1>
         </div>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-          totam tempora voluptate, modi ipsa repellendus perspiciatis soluta quo
-          nostrum expedita maxime voluptatum commodi optio ex tenetur, quaerat,
-          officia aspernatur ea.
-        </p>
+        <hr class="divider" />
+
+        <div class="list-container">
+          <div class="list-item-wrapper">
+            <div class="list-item-header">
+              <h2 class="text-xl">
+                <a
+                  href="https://givenergy.co.uk/"
+                  target="_blank"
+                  class="hover:underline"
+                >
+                  ⚡️ GivEnergy
+                </a>
+              </h2>
+              <h3
+                id="current-job-tenure"
+                class="text-white/65"
+                data-start-date="2024-03-05"
+              >
+                March 2024 - Present
+              </h3>
+              <div class="flex flex-wrap gap-2 w-full">
+                <a href="https://react.dev/" target="_blank">
+                  <div
+                    class="chip border-[#61dafb] hover:bg-[#61dafb] hover:bg-opacity-20"
+                  >
+                    <img src="/icons/react.svg" alt="React Logo" class="icon" />
+                    <span>React</span>
+                  </div>
+                </a>
+
+                <a href="https://www.typescriptlang.org/" target="_blank">
+                  <div
+                    class="chip border-[#3178c6] hover:bg-[#3178c6] hover:bg-opacity-20"
+                  >
+                    <img
+                      src="/icons/typescript.svg"
+                      alt="TypeScript Logo"
+                      class="icon"
+                    />
+                    <span>TypeScript</span>
+                  </div>
+                </a>
+
+                <a href="https://nodejs.org/" target="_blank">
+                  <div
+                    class="chip border-[#5fa04e] hover:bg-[#5fa04e] hover:bg-opacity-20"
+                  >
+                    <img
+                      src="/icons/node.svg"
+                      alt="Node.js Logo"
+                      class="icon"
+                    />
+                    <span>Node.js</span>
+                  </div>
+                </a>
+
+                <a href="https://tailwindcss.com/" target="_blank">
+                  <div
+                    class="chip border-[#38bdf8] hover:bg-[#38bdf8] hover:bg-opacity-20"
+                  >
+                    <img
+                      src="/icons/tailwind.svg"
+                      alt="Tailwind Logo"
+                      class="icon"
+                    />
+                    <span>Tailwind</span>
+                  </div>
+                </a>
+
+                <a href="https://ionicframework.com/" target="_blank">
+                  <div
+                    class="chip border-[#3880ff] hover:bg-[#3880ff] hover:bg-opacity-20"
+                  >
+                    <img src="/icons/ionic.svg" alt="Ionic Logo" class="icon" />
+                    <span>Ionic</span>
+                  </div>
+                </a>
+
+                <a href="https://capacitorjs.com/" target="_blank">
+                  <div
+                    class="chip border-[#53b9ff] hover:bg-[#53b9ff] hover:bg-opacity-20"
+                  >
+                    <img
+                      src="/icons/capacitor.svg"
+                      alt="Capacitor Logo"
+                      class="icon"
+                    />
+                    <span>Capacitor</span>
+                  </div>
+                </a>
+
+                <a href="https://aws.amazon.com/" target="_blank">
+                  <div
+                    class="chip border-[#ff9900] hover:bg-[#ff9900] hover:bg-opacity-20"
+                  >
+                    <img src="/icons/aws.svg" alt="AWS Logo" class="icon" />
+                    <span>AWS</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="list-item-body">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+                asperiores alias, labore quia cupiditate commodi animi similique
+                voluptatem rerum, eaque quo aperiam dolor vel numquam repellat
+                soluta temporibus quod quam!
+              </p>
+            </div>
+          </div>
+
+          <hr class="divider !my-4" />
+
+          <div class="list-item-wrapper">
+            <div class="list-item-header">
+              <h2 class="text-xl">
+                <a
+                  href="https://www.premiersystems.com/"
+                  target="_blank"
+                  class="hover:underline"
+                >
+                  🍻 Premier Systems
+                </a>
+              </h2>
+              <h3 class="text-white/65">
+                July 2021 - February 2024 (2 yrs 8 mos)
+              </h3>
+              <div class="flex flex-wrap gap-2 w-full">
+                <a href="https://vuejs.org/" target="_blank">
+                  <div
+                    class="chip border-[#42b883] hover:bg-[#42b883] hover:bg-opacity-20"
+                  >
+                    <img
+                      src="/icons/vue-logo.svg"
+                      alt="Vue Logo"
+                      class="icon"
+                    />
+                    <span>Vue</span>
+                  </div>
+                </a>
+
+                <a href="https://www.typescriptlang.org/" target="_blank">
+                  <div
+                    class="chip border-[#3178c6] hover:bg-[#3178c6] hover:bg-opacity-20"
+                  >
+                    <img
+                      src="/icons/typescript.svg"
+                      alt="TypeScript Logo"
+                      class="icon"
+                    />
+                    <span>TypeScript</span>
+                  </div>
+                </a>
+
+                <a href="https://vuetifyjs.com/" target="_blank">
+                  <div
+                    class="chip border-[#1697F6] hover:bg-[#1697F6] hover:bg-opacity-20"
+                  >
+                    <img
+                      src="/icons/vuetify.svg"
+                      alt="Vuetify Logo"
+                      class="icon"
+                    />
+                    <span>Vuetify</span>
+                  </div>
+                </a>
+
+                <a
+                  href="https://learn.microsoft.com/en-us/dotnet/csharp/"
+                  target="_blank"
+                >
+                  <div
+                    class="chip border-[#927be5] hover:bg-[#927be5] hover:bg-opacity-20"
+                  >
+                    <img src="/icons/c-sharp.svg" alt="C# Logo" class="icon" />
+                    <span>C#</span>
+                  </div>
+                </a>
+
+                <a href="https://cloud.google.com/" target="_blank">
+                  <div
+                    class="chip border-[#4285f4] hover:bg-[#4285f4] hover:bg-opacity-20"
+                  >
+                    <img
+                      src="/icons/google-cloud.svg"
+                      alt="GCP Logo"
+                      class="icon"
+                    />
+                    <span>Google Cloud</span>
+                  </div>
+                </a>
+
+                <a href="https://www.docker.com/" target="_blank">
+                  <div
+                    class="chip border-[#1d63ed] hover:bg-[#1d63ed] hover:bg-opacity-20"
+                  >
+                    <img
+                      src="/icons/docker.svg"
+                      alt="Docker Logo"
+                      class="h-5 w-5"
+                    />
+                    <span>Docker</span>
+                  </div>
+                </a>
+
+                <a href="https://www.postgresql.org/" target="_blank">
+                  <div
+                    class="chip border-[#336791] hover:bg-[#336791] hover:bg-opacity-20"
+                  >
+                    <img
+                      src="/icons/postgresql.svg"
+                      alt="PostgreSQL Logo"
+                      class="icon"
+                    />
+                    <span>PostgreSQL</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="list-item-body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Obcaecati totam tempora voluptate, modi ipsa repellendus
+                perspiciatis soluta quo nostrum expedita maxime voluptatum
+                commodi optio ex tenetur, quaerat, officia aspernatur ea.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="education" class="card">
-        <h1 class="title">Education</h1>
-        <h2 class="text-xl">
-          <a
-            href="https://www.bournemouth.ac.uk/"
-            target="_blank"
-            class="hover:underline"
-          >
-            📚 Bournemouth University
-          </a>
-        </h2>
-        <h3 class="text-white/65 mb-2">September 2019 - June 2023</h3>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-          ratione consequatur eaque autem. Deleniti mollitia vitae dolore itaque
-          maiores corrupti ullam! Tempora odio quo omnis vel sequi earum, saepe
-          molestiae.
-        </p>
+        <div class="header">
+          <h1 class="title">Education</h1>
+        </div>
 
-        <hr class="my-4 border-white/10" />
+        <hr class="divider" />
 
-        <h2 class="text-xl">
-          <a
-            href="https://barton-peveril.ac.uk/"
-            target="_blank"
-            class="hover:underline"
-          >
-            📖 Barton Peveril Sixth Form College
-          </a>
-        </h2>
-        <h3 class="text-white/65 mb-2">September 2017 - June 2019</h3>
-        <p><strong>Grade:</strong> AAB</p>
-        <p><strong>Subjects:</strong> Computer Science, Maths, Economics.</p>
-        <br />
-        <p>
-          Barton was the place where I realised that I wanted to pursue a career
-          in software development.
-        </p>
-        <br />
-        <p>
-          For my 2nd year computer science project, I built a maze-solving CLI
-          application in VB.NET that implemented Dykstra's algorithm. This
-          application parsed an image of a maze, with a start and end point, and
-          output the same image overlaid with the shortest path between the two
-          points. It also rendered the path finding process in the console, step
-          by step, animated in real time.
-        </p>
+        <div class="list-container">
+          <div class="list-item-wrapper">
+            <div class="list-item-header">
+              <h2 class="text-xl">
+                <a
+                  href="https://www.bournemouth.ac.uk/"
+                  target="_blank"
+                  class="hover:underline"
+                >
+                  📚 Bournemouth University
+                </a>
+              </h2>
+              <h3 class="text-white/65">September 2019 - June 2023</h3>
+              <span><strong>Grade:</strong> First</span>
+            </div>
+            <div class="list-item-body">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Doloremque ratione consequatur eaque autem. Deleniti mollitia
+                vitae dolore itaque maiores corrupti ullam! Tempora odio quo
+                omnis vel sequi earum, saepe molestiae.
+              </p>
+            </div>
+          </div>
+
+          <hr class="divider !my-4" />
+
+          <div class="list-item-wrapper">
+            <div class="list-item-header">
+              <h2 class="text-xl">
+                <a
+                  href="https://barton-peveril.ac.uk/"
+                  target="_blank"
+                  class="hover:underline"
+                >
+                  📖 Barton Peveril Sixth Form College
+                </a>
+              </h2>
+              <h3 class="text-white/65">September 2017 - June 2019</h3>
+              <span><strong>Grade:</strong> AAB</span>
+              <span>
+                <strong>Subjects:</strong> Computer Science, Maths, Economics.
+              </span>
+            </div>
+            <div class="list-item-body">
+              <p>
+                Barton was the place where I realised that I wanted to pursue a
+                career in software development.
+              </p>
+              <p>
+                For my 2nd year computer science project, I built a maze-solving
+                CLI application in VB.NET that implemented Dykstra's algorithm.
+              </p>
+              <p>
+                This application parsed an image of a maze, with a start and end
+                point, and output the same image overlaid with the shortest path
+                between the two points. It also rendered the path finding
+                process in the console, step by step, animated in real time.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="contact-me" class="card">
-        <h1 class="title">Contact Me</h1>
+        <div class="header">
+          <h1 class="title">Contact Me</h1>
+        </div>
+
+        <hr class="divider" />
+
         <ul class="text-lg font-semibold">
           <li class="mb-2">
             <a
