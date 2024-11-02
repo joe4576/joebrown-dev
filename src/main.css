@@ -50,7 +50,7 @@
 }
 
 .list-item-body {
-  @apply flex flex-col gap-7;
+  @apply flex flex-col gap-6 sm:gap-4;
 }
 
 .list {
@@ -58,5 +58,5 @@
 }
 
 .list > li {
-  @apply mb-4 sm:mb-3;
+  @apply mb-4 sm:mb-2;
 }
