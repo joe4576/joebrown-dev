@@ -33,24 +33,22 @@
   <body class="min-h-screen max-w-5xl mx-auto bg-primary relative">
     <header class="w-full fixed top-0 left-0 shadow-lg bg-secondary h-14 z-50">
       <div
-        class="h-full max-w-[1280px] mx-auto px-4 hidden sm:grid sm:grid-cols-[20%,1fr,20%] sm:place-items-center"
+        class="h-full max-w-6xl mx-auto px-4 hidden md:grid md:grid-cols-[20%,1fr,20%] md:place-items-center"
       >
         <a href="" class="text-white font-bold justify-self-start text-xl">
           Joe Brown
         </a>
 
-        <nav class="text-white hidden sm:block">
-          <ul
-            class="flex justify-center items-center h-full sm:gap-12 md:gap-16"
-          >
-            <li>
-              <a href="#about" class="hover:text-white/65">About</a>
-            </li>
+        <nav class="text-white hidden md:block">
+          <ul class="flex justify-center items-center h-full gap-16">
             <li>
               <a href="#experience" class="hover:text-white/65">Experience</a>
             </li>
             <li>
               <a href="#education" class="hover:text-white/65">Education</a>
+            </li>
+            <li>
+              <a href="#contact-me" class="hover:text-white/65">Contact</a>
             </li>
           </ul>
         </nav>
@@ -58,17 +56,17 @@
         <a
           href="https://github.com/joe4576"
           target="_blank"
-          class="hidden sm:block justify-self-end"
+          class="hidden md:block justify-self-end"
         >
           <img src="/icons/github.svg" alt="GitHub Logo" class="w-8 h-8" />
         </a>
       </div>
 
       <div
-        class="h-full max-w-[1280px] mx-auto px-4 flex justify-between items-center sm:hidden"
+        class="h-full max-w-[1280px] mx-auto px-4 flex justify-between items-center md:hidden"
       >
         <a class="text-white font-bold" href=""> Joe Brown </a>
-        <div id="hamburger" class="flex justify-end items-center sm:hidden">
+        <div id="hamburger" class="flex justify-end items-center md:hidden">
           <div
             class="hover:bg-white/10 rounded-full h-10 w-10 flex justify-center items-center"
           >
@@ -87,11 +85,6 @@
           <nav class="bg-primary shadow-2xl text-white">
             <ul class="flex flex-col justify-center">
               <li class="hover:bg-secondary/50">
-                <a href="#about" class="mobile-item">
-                  <div class="w-full h-full p-4">About</div>
-                </a>
-              </li>
-              <li class="hover:bg-secondary/50">
                 <a href="#experience" class="mobile-item">
                   <div class="w-full h-full p-4">Experience</div>
                 </a>
@@ -99,6 +92,11 @@
               <li class="hover:bg-secondary/50">
                 <a href="#education" class="mobile-item">
                   <div class="w-full h-full p-4">Education</div>
+                </a>
+              </li>
+              <li class="hover:bg-secondary/50">
+                <a href="#contact-me" class="mobile-item">
+                  <div class="w-full h-full p-4">Contact</div>
                 </a>
               </li>
             </ul>
@@ -631,26 +629,18 @@
 
         <hr class="divider" />
 
-        <ul class="text-lg font-semibold">
-          <li class="mb-2">
-            <a
-              class="hover:underline"
-              href="https://github.com/joe4576"
-              target="_blank"
-            >
-              GitHub
-            </a>
-          </li>
-          <li>
-            <a
-              class="hover:underline"
-              href="https://www.linkedin.com/in/joe-brown-282196213/"
-              target="_blank"
-            >
-              LinkedIn
-            </a>
-          </li>
-        </ul>
+        <div class="flex justify-center items-center">
+          <a
+            href="https://www.linkedin.com/in/joe-brown-282196213/"
+            target="_blank"
+          >
+            <img
+              src="/icons/linkedin.webp"
+              alt="LinkedIn Logo"
+              class="w-40 h-auto"
+            />
+          </a>
+        </div>
       </section>
     </main>
   </body>
