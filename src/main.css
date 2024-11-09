@@ -46,7 +46,7 @@
 }
 
 .list-item-header {
-  @apply flex flex-col gap-3 mb-6 sm:mb-10;
+  @apply flex flex-col;
 }
 
 .list-item-body {
