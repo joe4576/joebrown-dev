@@ -33,8 +33,17 @@ const calculateTimeSinceDateInclusive = (date) => {
   const now = new Date();
   const inputDate = new Date(date);
 
-  const years = now.getFullYear() - inputDate.getFullYear();
-  const months = now.getMonth() - inputDate.getMonth() + 1;
+  let years = now.getFullYear() - inputDate.getFullYear();
+  let months = now.getMonth() - inputDate.getMonth() + 1;
+
+  if (now.getDate() < inputDate.getDate()) {
+    months--;
+  }
+
+  if (months <= 0) {
+    months += 12;
+    years--;
+  }
 
   return { years, months };
 };
