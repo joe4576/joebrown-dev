@@ -1,4 +1,5 @@
 import defaultTheme from "tailwindcss/defaultTheme";
+import theme from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -9,9 +10,14 @@ export default {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: "#121212",
-        secondary: "#282828",
-        tertiary: "#3f3f3f",
+        pastel: {
+          red: "#FFADAD",
+          orange: "#FFD6A5",
+          yellow: "#FDFFB6",
+          green: "#E4F1EE",
+          blue: "#D9EDF8",
+          purple: "#DEDAF4",
+        },
       },
     },
   },

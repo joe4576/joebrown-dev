@@ -2,50 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-.chip {
-  @apply flex
-  items-center
-  gap-1.5
-  border-2
-  px-2
-  py-1
-  rounded-lg
-  text-sm;
+.shadow {
+  --tw-shadow: 4px 4px 0px 0px black;
+  --tw-shadow-colored: 0px 0px black;
 }
 
-.card {
-  @apply w-full
-  rounded-lg
-  p-5
-  sm:p-8
-  text-white
-  shadow-md
-  hover:shadow-lg
-  bg-secondary;
+.shadow-none {
+  --tw-shadow: none;
+  --tw-shadow-colored: none;
+}
+
+.button {
+  @apply rounded-sm shadow p-2 border-[3px] border-black transition-all hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none;
 }
 
 .title {
-  @apply text-3xl font-bold text-center;
-}
-
-.icon {
-  @apply w-5 h-5;
-}
-
-.header {
-  @apply flex flex-col gap-2 justify-between;
-}
-
-.list-container {
-  @apply flex flex-col gap-4 justify-around;
-}
-
-.list-item-header {
-  @apply flex flex-col;
-}
-
-.list-item-body {
-  @apply flex flex-col gap-6 sm:gap-4;
+  @apply text-3xl font-bold text-center my-2;
 }
 
 .list {
@@ -53,5 +25,25 @@
 }
 
 .list > li {
-  @apply mb-4 sm:mb-2;
+  @apply mb-2;
+}
+
+.card {
+  @apply rounded-sm shadow p-8 border-[3px] border-black;
+}
+
+.card-title {
+  @apply text-2xl font-bold;
+}
+
+.card-subtitle {
+  @apply text-lg text-black/65;
+}
+
+.card-body {
+  @apply flex flex-col gap-5 mt-4;
+}
+
+#mobile-menu li {
+  @apply border-b-4 border-b-black text-lg font-bold hover:bg-pastel-blue;
 }
