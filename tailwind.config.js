@@ -9,13 +9,17 @@ export default {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
       colors: {
+        "primary-text": "var(--primary-text)",
+        "primary-text-muted": "var(--primary-text-muted)",
+        "primary-bg": "var(--primary-bg)",
+        "secondary-bg": "var(--secondary-bg)",
         pastel: {
-          red: "#FFADAD",
-          orange: "#FFD6A5",
-          yellow: "#FDFFB6",
-          green: "#E4F1EE",
-          blue: "#D9EDF8",
-          purple: "#DEDAF4",
+          red: "var(--pastel-red)",
+          orange: "var(--pastel-orange)",
+          yellow: "var(--pastel-yellow)",
+          green: "var(--pastel-green)",
+          blue: "var(--pastel-blue)",
+          purple: "var(--pastel-purple)",
         },
       },
       borderWidth: {

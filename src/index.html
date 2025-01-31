@@ -34,17 +34,17 @@
     <title>Joe Brown | Full Stack Software Engineer</title>
   </head>
   <body
-    class="min-h-screen max-w-5xl mx-auto bg-[radial-gradient(#80808080_1px,transparent_1px)] [background-size:16px_16px] [background-attachment:fixed] relative"
+    class="min-h-screen max-w-5xl mx-auto text-primary-text bg-primary-bg bg-[radial-gradient(#80808080_1px,transparent_1px)] dark:bg-[radial-gradient(#50505050_1px,transparent_1px)] [background-size:16px_16px] [background-attachment:fixed] relative"
   >
     <header
-      class="w-full fixed top-0 left-0 bg-white h-20 z-50 border-b-base border-black"
+      class="w-full fixed top-0 left-0 bg-primary-bg h-20 z-50 border-b-base border-black dark:border-white/80"
     >
       <div
         class="h-full max-w-6xl mx-auto px-4 hidden md:grid md:grid-cols-[10%,1fr,10%] md:place-items-center"
       >
         <a
           href=""
-          class="font-bold justify-self-start text-xl rounded-md border-base border-black p-2 tracking-wider"
+          class="font-bold justify-self-start text-xl rounded-md border-base border-black dark:border-white/80 p-2 tracking-wider"
         >
           JB
         </a>
@@ -72,7 +72,17 @@
           target="_blank"
           class="hidden md:block justify-self-end button"
         >
-          <img src="/icons/github-mark.svg" alt="GitHub Logo" class="w-6 h-6" />
+          <picture>
+            <source
+              srcset="/icons/github-mark-white.svg"
+              media="(prefers-color-scheme: dark)"
+            />
+            <img
+              src="/icons/github-mark.svg"
+              alt="GitHub Logo"
+              class="w-6 h-6"
+            />
+          </picture>
         </a>
       </div>
 
@@ -81,7 +91,7 @@
       >
         <a
           href=""
-          class="font-bold justify-self-start text-xl rounded-md border-base border-black p-2 tracking-wider"
+          class="font-bold justify-self-start text-xl rounded-md border-base border-black dark:border-white/80 p-2 tracking-wider"
         >
           JB
         </a>
@@ -89,11 +99,17 @@
           id="hamburger"
           class="button flex justify-end items-center md:hidden"
         >
-          <img
-            class="w-6 h-6 cursor-pointer"
-            src="/icons/hamburger.svg"
-            alt="Hamburger menu"
-          />
+          <picture>
+            <source
+              srcset="/icons/hamburger-white.svg"
+              media="(prefers-color-scheme: dark)"
+            />
+            <img
+              class="w-6 h-6"
+              src="/icons/hamburger.svg"
+              alt="Hamburger menu"
+            />
+          </picture>
         </button>
 
         <div
@@ -134,7 +150,9 @@
         class="absolute top-0 left-0 h-[calc(100svh-5.7rem)] pb-4 sm:pb-0 flex flex-col gap-2 justify-center items-center text-center relative"
       >
         <h1 class="text-6xl font-bold">Joe Brown</h1>
-        <h2 class="text-4xl text-black/50">Full-Stack Software Engineer</h2>
+        <h2 class="text-4xl text-black/50 dark:text-white/50">
+          Full-Stack Software Engineer
+        </h2>
       </section>
       <div class="flex flex-col gap-12">
         <section id="about" class="card bg-pastel-red">
@@ -167,7 +185,7 @@
           </div>
         </section>
 
-        <section id="experience" class="card bg-white">
+        <section id="experience" class="card bg-secondary-bg">
           <h2 class="title">Experience</h2>
         </section>
 
@@ -297,7 +315,7 @@
           </div>
         </section>
 
-        <section id="education" class="card bg-white">
+        <section id="education" class="card bg-secondary-bg">
           <h2 class="title">Education</h2>
         </section>
 
@@ -388,7 +406,7 @@
           </div>
         </section>
 
-        <section id="contact-me" class="card bg-white">
+        <section id="contact-me" class="card bg-secondary-bg">
           <h2 class="title">Contact Me</h2>
         </section>
 
@@ -397,7 +415,7 @@
             <a
               href="https://www.linkedin.com/in/joe-brown-282196213/"
               target="_blank"
-              class="button bg-white !p-4"
+              class="button !p-4"
             >
               <img
                 class="w-10 h-10"

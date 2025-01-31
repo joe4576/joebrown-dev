@@ -6,9 +6,45 @@
   --shadow-offset: 4px;
 }
 
-.shadow {
-  --tw-shadow: var(--shadow-offset) var(--shadow-offset) 0px 0px black;
-  --tw-shadow-colored: 0px 0px black;
+@media (prefers-color-scheme: light) {
+  .shadow {
+    --tw-shadow: var(--shadow-offset) var(--shadow-offset) 0px 0px black;
+    --tw-shadow-colored: 0px 0px black;
+  }
+
+  :root {
+    --primary-text: rgba(18, 18, 18, 1);
+    --primary-text-muted: rgba(18, 18, 18, 0.65);
+    --primary-bg: #f5f5f5;
+    --secondary-bg: #f5f5f5;
+    --pastel-red: #ffadad;
+    --pastel-orange: #ffd6a5;
+    --pastel-yellow: #fdffb6;
+    --pastel-green: #e4f1ee;
+    --pastel-blue: #d9edf8;
+    --pastel-purple: #dedaf4;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .shadow {
+    --tw-shadow: var(--shadow-offset) var(--shadow-offset) 0px 0px
+      rgba(255, 255, 255, 0.3);
+    --tw-shadow-colored: 0px 0px rgba(255, 255, 255, 0.3);
+  }
+
+  :root {
+    --primary-text: rgba(245, 245, 245, 1);
+    --primary-text-muted: rgba(245, 245, 245, 0.65);
+    --primary-bg: #121212;
+    --secondary-bg: #212121;
+    --pastel-red: #4f1515;
+    --pastel-orange: #572a03;
+    --pastel-yellow: #4f3e02;
+    --pastel-green: #24453d;
+    --pastel-blue: #133345;
+    --pastel-purple: #252330;
+  }
 }
 
 .shadow-none {
@@ -17,7 +53,7 @@
 }
 
 .button {
-  @apply rounded-sm shadow p-2 border-base border-black transition-all hover:translate-x-[var(--shadow-offset)] hover:translate-y-[var(--shadow-offset)] hover:shadow-none;
+  @apply rounded-sm shadow p-2 border-base border-black dark:border-white/80 transition-all hover:translate-x-[var(--shadow-offset)] hover:translate-y-[var(--shadow-offset)] hover:shadow-none;
 }
 
 .title {
@@ -33,15 +69,15 @@
 }
 
 .card {
-  @apply rounded-sm shadow p-8 border-base border-black;
+  @apply rounded-sm shadow p-8 border-base border-black dark:border-white;
 }
 
 .card-title {
-  @apply text-2xl font-bold;
+  @apply text-2xl font-bold text-primary-text;
 }
 
 .card-subtitle {
-  @apply text-lg text-black/65;
+  @apply text-lg text-primary-text-muted;
 }
 
 .card-body {
@@ -49,5 +85,5 @@
 }
 
 #mobile-menu li {
-  @apply border-b-base border-b-black text-lg font-bold hover:bg-pastel-blue;
+  @apply border-b-base border-b-black dark:border-b-white/80 text-lg font-bold hover:bg-pastel-blue;
 }
