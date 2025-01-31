@@ -36,14 +36,14 @@
   :root {
     --primary-text: rgba(245, 245, 245, 1);
     --primary-text-muted: rgba(245, 245, 245, 0.65);
-    --primary-bg: #121212;
-    --secondary-bg: #212121;
-    --pastel-red: #4f1515;
-    --pastel-orange: #572a03;
-    --pastel-yellow: #4f3e02;
-    --pastel-green: #24453d;
-    --pastel-blue: #133345;
-    --pastel-purple: #252330;
+    --primary-bg: #1f1f1f;
+    --secondary-bg: #313131;
+    --pastel-red: #212121;
+    --pastel-orange: #212121;
+    --pastel-yellow: #212121;
+    --pastel-green: #212121;
+    --pastel-blue: #212121;
+    --pastel-purple: #212121;
   }
 }
 
