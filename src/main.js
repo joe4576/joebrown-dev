@@ -6,12 +6,12 @@ const mobileMenu = document.getElementById("mobile-menu");
 let isOpen = false;
 
 const openMobileMenu = () => {
-  mobileMenu.style.height = "100%";
+  mobileMenu.style.display = "block";
   isOpen = true;
 };
 
 const closeMobileMenu = () => {
-  mobileMenu.style.height = 0;
+  mobileMenu.style.display = "none";
   isOpen = false;
 };
 
