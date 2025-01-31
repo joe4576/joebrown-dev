@@ -1,5 +1,4 @@
 import defaultTheme from "tailwindcss/defaultTheme";
-import theme from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -18,6 +17,10 @@ export default {
           blue: "#D9EDF8",
           purple: "#DEDAF4",
         },
+      },
+      borderWidth: {
+        ...defaultTheme.borderWidth,
+        base: "3px",
       },
     },
   },
