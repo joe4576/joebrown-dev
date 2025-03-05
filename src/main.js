@@ -58,8 +58,10 @@ const setCurrentJobTenure = () => {
 
   const { years, months } = calculateTimeSinceDateInclusive(startDate);
 
-  const duration =
-    years === 0 ? `${months} mos` : `${years} yrs, ${months} mos`;
+  const monthString = months === 1 ? `${months} mo` : `${months} mos`;
+  const yearString = years === 1 ? `${years} yr` : `${years} yrs`;
+
+  const duration = years > 0 ? `${yearString} ${monthString}` : monthString;
 
   tenure.textContent += `(${duration})`;
 };
