@@ -3,29 +3,17 @@ const hamburger = document.getElementById("hamburger");
 const closeMenu = document.getElementById("close-menu");
 const mobileMenu = document.getElementById("mobile-menu");
 
-let isOpen = false;
-
-const openMobileMenu = () => {
-  mobileMenu.style.display = "block";
-  isOpen = true;
-};
-
-const closeMobileMenu = () => {
-  mobileMenu.style.display = "none";
-  isOpen = false;
-};
-
 hamburger.addEventListener("click", () => {
-  isOpen ? closeMobileMenu() : openMobileMenu();
+  mobileMenu.classList.toggle("hidden");
 });
 
 closeMenu.addEventListener("click", () => {
-  closeMobileMenu();
+  mobileMenu.classList.add("hidden");
 });
 
 mobileItems.forEach((item) => {
   item.addEventListener("click", () => {
-    closeMobileMenu();
+    mobileMenu.classList.add("hidden");
   });
 });
 

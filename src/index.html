@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth scroll-py-[124px]">
+<html lang="en" class="scroll-smooth scroll-py-[170px]">
   <head>
     <meta charset="UTF-8" />
 
@@ -7,25 +7,17 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <meta name="theme-color" content="#1c1c1c" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
     <meta
       name="description"
       content="Joe Brown | Full Stack Software Engineer"
-    />
-
-    <link
-      rel="preload"
-      href="/font/Inter-Regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-
-    <link
-      rel="preload"
-      href="/font/Inter-Bold.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
     />
 
     <link rel="stylesheet" href="./main.css" />
@@ -35,36 +27,29 @@
 
     <title>Joe Brown | Full Stack Software Engineer</title>
   </head>
-  <body
-    class="min-h-screen max-w-5xl mx-auto bg-[radial-gradient(#80808080_1px,transparent_1px)] [background-size:16px_16px] [background-attachment:fixed] relative"
-  >
+  <body class="min-h-screen max-w-5xl mx-auto background relative text-white">
     <header
-      class="w-full fixed top-0 left-0 bg-white h-20 z-50 border-b-base border-black"
+      class="w-full fixed top-0 left-0 navbar-blur bg-[#1c1c1c]/20 h-20 z-50 border-b border-white/10"
     >
       <div
-        class="h-full max-w-6xl mx-auto px-4 hidden md:grid md:grid-cols-[10%,1fr,10%] md:place-items-center"
+        class="h-full max-w-6xl mx-auto px-4 hidden md:grid md:grid-cols-[20%,1fr,20%] md:place-items-center"
       >
-        <a
-          href="/"
-          class="font-bold justify-self-start text-xl rounded-md border-base border-black p-2 tracking-wider"
-        >
-          JB
+        <a href="/" class="font-bold justify-self-start text-xl tracking-wider">
+          Joe Brown
         </a>
 
         <nav class="hidden md:block md:w-full">
-          <ul
-            class="flex justify-center items-center gap-10 lg:gap-16 text-xl font-bold"
-          >
-            <li class="hover:underline">
+          <ul class="flex justify-center items-center gap-10 lg:gap-16 text-lg">
+            <li class="hover:text-white/50 transition-colors duration-300">
               <a href="#about">About</a>
             </li>
-            <li class="hover:underline">
+            <li class="hover:text-white/50 transition-colors duration-300">
               <a href="#experience">Experience</a>
             </li>
-            <li class="hover:underline">
+            <li class="hover:text-white/50 transition-colors duration-300">
               <a href="#education">Education</a>
             </li>
-            <li class="hover:underline">
+            <li class="hover:text-white/50 transition-colors duration-300">
               <a href="#contact-me">Contact</a>
             </li>
           </ul>
@@ -72,61 +57,79 @@
         <a
           href="https://github.com/joe4576"
           target="_blank"
-          class="hidden md:block justify-self-end button"
+          class="hidden md:block justify-self-end text-white hover:text-white/60 transition-colors duration-300"
         >
-          <img src="/icons/github-mark.svg" alt="GitHub Logo" class="w-6 h-6" />
+          <svg
+            width="30"
+            height="30"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 97.707 96.807"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"
+              fill="currentColor"
+            />
+          </svg>
         </a>
       </div>
 
       <div
         class="h-full max-w-[1280px] mx-auto px-4 flex justify-between items-center md:hidden"
       >
-        <a
-          href="/"
-          class="font-bold justify-self-start text-xl rounded-md border-base border-black p-2 tracking-wider"
-        >
-          JB
+        <a href="/" class="font-bold justify-self-start text-xl tracking-wider">
+          Joe Brown
         </a>
         <button
           id="hamburger"
-          class="button flex justify-end items-center md:hidden"
+          class="button flex justify-end items-center md:hidden text-white"
         >
-          <img
-            class="w-6 h-6 cursor-pointer"
-            src="/icons/hamburger.svg"
-            alt="Hamburger menu"
-          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="currentColor"
+          >
+            <path
+              d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+            />
+          </svg>
         </button>
 
-        <div
-          id="mobile-menu"
-          class="w-full h-full fixed top-20 left-0 z-10 overflow-y-hidden hidden"
-        >
-          <nav class="bg-white">
-            <ul class="flex flex-col justify-center">
-              <li>
-                <a href="#about" class="mobile-item">
-                  <div class="w-full h-full p-4">About</div>
-                </a>
-              </li>
-              <li>
-                <a href="#experience" class="mobile-item">
-                  <div class="w-full h-full p-4">Experience</div>
-                </a>
-              </li>
-              <li>
-                <a href="#education" class="mobile-item">
-                  <div class="w-full h-full p-4">Education</div>
-                </a>
-              </li>
-              <li>
-                <a href="#contact-me" class="mobile-item">
-                  <div class="w-full h-full p-4">Contact</div>
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div id="close-menu" class="bg-black/65 h-full cursor-pointer"></div>
+        <div id="mobile-menu" class="fixed inset-0 z-100 h-screen mt-20 hidden">
+          <div class="relative z-10 w-full bg-[#3f3f3f] shadow-lg">
+            <nav>
+              <ul class="flex flex-col justify-center">
+                <li>
+                  <a href="#about" class="mobile-item">
+                    <div class="w-full h-full p-4">About</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#experience" class="mobile-item">
+                    <div class="w-full h-full p-4">Experience</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#education" class="mobile-item">
+                    <div class="w-full h-full p-4">Education</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact-me" class="mobile-item">
+                    <div class="w-full h-full p-4">Contact</div>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div
+            id="close-menu"
+            class="absolute inset-0 top-20 bg-black/40"
+          ></div>
         </div>
       </div>
     </header>
@@ -135,17 +138,19 @@
       <section
         class="top-0 left-0 h-[calc(100svh-6rem)] pb-4 flex flex-col gap-2 justify-center items-center text-center relative"
       >
-        <h1 class="text-6xl font-bold">Joe Brown</h1>
-        <h2 class="text-4xl text-black/50">Full-Stack Software Engineer</h2>
+        <h1 class="text-6xl font-bold fade-in-heading">Joe Brown</h1>
+        <h2 class="text-4xl text-white/50 fade-in-heading">
+          Full-Stack Software Engineer
+        </h2>
       </section>
-      <div class="flex flex-col gap-12">
-        <section id="about" class="card bg-pastel-red">
+      <div class="flex flex-col gap-16 mb-16">
+        <section id="about" class="card">
           <h3 class="card-title">About me</h3>
           <div class="card-body">
             <p>
-              I am a 23-year-old full-stack software engineer with a strong
-              focus on frontend web development. I specialise in Vue and React.
-              I am also a strong advocate for TypeScript.
+              I am a full-stack software engineer with a strong focus on
+              frontend web development. I specialise in Vue and React. I am also
+              a strong advocate for TypeScript.
             </p>
             <p>
               Software development has always been a keen interest of mine. I
@@ -162,11 +167,11 @@
           </div>
         </section>
 
-        <section id="experience" class="card bg-white">
+        <section id="experience" class="text-center my-12">
           <h2 class="title">Experience</h2>
         </section>
 
-        <section class="card bg-pastel-orange">
+        <section class="card">
           <h3 class="card-title">
             <a
               href="https://givenergy.co.uk/"
@@ -216,7 +221,9 @@
           </div>
         </section>
 
-        <section class="card bg-pastel-yellow">
+        <div class="divider"></div>
+
+        <section class="card">
           <h3 class="card-title">
             <a
               href="https://premiersystems.com/"
@@ -293,11 +300,11 @@
           </div>
         </section>
 
-        <section id="education" class="card bg-white">
+        <section id="education" class="text-center my-12">
           <h2 class="title">Education</h2>
         </section>
 
-        <section class="card bg-pastel-green">
+        <section class="card">
           <h3 class="card-title">
             <a
               href="https://www.bournemouth.ac.uk/"
@@ -352,7 +359,9 @@
           </div>
         </section>
 
-        <section class="card bg-pastel-blue">
+        <div class="divider"></div>
+
+        <section class="card">
           <h3 class="card-title">
             <a
               href="https://barton-peveril.ac.uk/"
@@ -384,22 +393,41 @@
           </div>
         </section>
 
-        <section id="contact-me" class="card bg-white">
-          <h2 class="title">Contact Me</h2>
-        </section>
+        <div class="divider"></div>
 
-        <section class="card bg-pastel-purple">
-          <div class="flex justify-center items-center">
+        <section id="contact-me">
+          <div
+            class="flex flex-col sm:flex-row justify-center items-center gap-12 sm:gap-16"
+          >
             <a
               href="https://www.linkedin.com/in/joe-brown-282196213/"
               target="_blank"
-              class="button bg-white !p-4"
             >
               <img
-                class="w-10 h-10"
-                src="/logos/linkedin.svg"
+                class="w-52 h-auto"
+                src="/logos/linkedin.webp"
                 alt="LinkedIn Logo"
               />
+            </a>
+
+            <a
+              href="https://github.com/joe4576"
+              target="_blank"
+              class="text-white hover:text-white/60 transition-colors duration-300"
+            >
+              <svg
+                width="52"
+                height="52"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 97.707 96.807"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"
+                  fill="currentColor"
+                />
+              </svg>
             </a>
           </div>
         </section>

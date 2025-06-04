@@ -3,25 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --shadow-offset: 4px;
-}
-
-.shadow {
-  --tw-shadow: var(--shadow-offset) var(--shadow-offset) 0px 0px black;
-  --tw-shadow-colored: 0px 0px black;
-}
-
-.shadow-none {
-  --tw-shadow: none;
-  --tw-shadow-colored: none;
+  color-scheme: dark;
 }
 
 .button {
-  @apply rounded-sm shadow p-2 border-base border-black transition-all hover:translate-x-[var(--shadow-offset)] hover:translate-y-[var(--shadow-offset)] hover:shadow-none;
+  @apply rounded-full p-2 hover:bg-white/5 transition-colors duration-300;
 }
 
 .title {
-  @apply text-3xl font-bold text-center my-2;
+  @apply text-5xl;
 }
 
 .list {
@@ -33,21 +23,60 @@
 }
 
 .card {
-  @apply rounded-sm shadow p-8 border-base border-black;
+  @apply flex flex-col max-w-lg sm:max-w-xl md:max-w-2xl mx-auto;
 }
 
 .card-title {
-  @apply text-2xl font-bold;
+  @apply text-4xl;
 }
 
 .card-subtitle {
-  @apply text-lg text-black/65;
+  @apply text-xl text-white/60 mt-2;
 }
 
 .card-body {
-  @apply flex flex-col gap-5 mt-4;
+  @apply flex flex-col gap-5 mt-6;
 }
 
 #mobile-menu li {
-  @apply border-b-base border-b-black text-lg font-bold hover:bg-pastel-blue;
+  @apply hover:bg-[#323232];
+}
+
+.divider {
+  @apply border-t border-white/50 w-1/6 mx-auto;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-in-heading {
+  animation: fadeInDown 1s forwards;
+  opacity: 0;
+}
+
+.background {
+  background-color: #3f3f3f;
+
+  background: linear-gradient(to bottom, #323232 0%, #3f3f3f 40%, #1c1c1c 150%),
+    linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(0, 0, 0, 0.25) 200%
+    );
+
+  background-blend-mode: multiply;
+}
+
+.navbar-blur {
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
 }
