@@ -4,6 +4,7 @@
 
 :root {
   color-scheme: dark;
+  --header-height: 5rem;
 }
 
 .button {
@@ -49,7 +50,7 @@
 @keyframes fadeInDown {
   0% {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-30px);
   }
 
   to {
@@ -59,7 +60,7 @@
 }
 
 .fade-in-heading {
-  animation: fadeInDown 1s forwards;
+  animation: fadeInDown 2s forwards;
   opacity: 0;
 }
 
@@ -74,6 +75,15 @@
     );
 
   background-blend-mode: multiply;
+}
+
+/* Firefox can't render gradients properly */
+@supports (-moz-appearance: none) {
+  .background {
+    background: none;
+    background-color: #3f3f3f;
+    background-blend-mode: normal;
+  }
 }
 
 .navbar-blur {

@@ -21,15 +21,14 @@
     />
 
     <link rel="stylesheet" href="./main.css" />
-    <link rel="stylesheet" href="./font.css" />
 
     <script src="./main.js" type="module" defer></script>
 
     <title>Joe Brown | Full Stack Software Engineer</title>
   </head>
-  <body class="min-h-screen max-w-5xl mx-auto background relative text-white">
+  <body class="max-w-5xl mx-auto background relative text-white">
     <header
-      class="w-full fixed top-0 left-0 navbar-blur bg-[#1c1c1c]/30 h-20 z-50 border-b border-white/10"
+      class="w-full fixed top-0 left-0 navbar-blur bg-[#1c1c1c]/30 h-[var(--header-height)] z-50 border-b border-white/10"
     >
       <div
         class="h-full max-w-6xl mx-auto px-4 hidden md:grid md:grid-cols-[20%,1fr,20%] md:place-items-center"
@@ -135,9 +134,9 @@
       </div>
     </header>
 
-    <main class="flex flex-col justify-start p-4 pb-12 mt-20">
+    <main class="flex flex-col justify-start p-4 pt-0 pb-12 mt-20">
       <section
-        class="top-0 left-0 h-[calc(100svh-6rem)] pb-4 flex flex-col gap-2 justify-center items-center text-center relative"
+        class="h-[var(--hero-height,100vh)] flex flex-col gap-2 justify-center items-center text-center"
       >
         <h1 class="text-6xl font-bold fade-in-heading">Joe Brown</h1>
         <h2 class="text-4xl text-white/50 fade-in-heading">

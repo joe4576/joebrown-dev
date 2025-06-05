@@ -54,4 +54,42 @@ const setCurrentJobTenure = () => {
   tenure.textContent += `(${duration})`;
 };
 
+const setHeroHeight = () => {
+  // SVH units are not supported in all browsers, i.e. Firefox.
+  // SVH also causes lag on scroll in some in-app browsers, so
+  // set the hero height manually instead.
+  const remMultiplier = parseFloat(
+    getComputedStyle(document.documentElement).fontSize,
+  );
+
+  const headerHeightPx =
+    window
+      .getComputedStyle(document.documentElement)
+      .getPropertyValue("--header-height")
+      .split("rem")[0] * remMultiplier;
+
+  const windowHeight = window.innerHeight;
+
+  document.documentElement.style.setProperty(
+    "--hero-height",
+    `${windowHeight - headerHeightPx}px`,
+  );
+};
+
+const isDesktop = navigator.maxTouchPoints === 0;
+let initialWidth = window.innerWidth;
+
+window.addEventListener("resize", ({ target }) => {
+  const newWidth = target.innerWidth;
+
+  // Allow resize on desktop, or if the width has changed
+  // on mobile (changing screen orientation).
+  if (isDesktop || newWidth !== initialWidth) {
+    initialWidth = newWidth;
+    setHeroHeight();
+  }
+});
+
+window.addEventListener("DOMContentLoaded", setHeroHeight);
+
 setCurrentJobTenure();
