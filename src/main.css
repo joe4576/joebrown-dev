@@ -5,6 +5,7 @@
 :root {
   color-scheme: dark;
   --header-height: 5rem;
+  --hero-height: calc(100svh - var(--header-height));
 }
 
 .button {
