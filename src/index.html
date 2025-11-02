@@ -1,19 +1,11 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth scroll-py-[170px]">
+<html lang="en" class="scroll-smooth scroll-py-32">
   <head>
     <meta charset="UTF-8" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <meta name="theme-color" content="#1c1c1c" />
-
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
-    />
 
     <meta
       name="description"
@@ -26,144 +18,137 @@
 
     <title>Joe Brown | Full Stack Software Engineer</title>
   </head>
-  <body class="max-w-5xl mx-auto background relative text-white">
+
+  <body class="relative bg-white dark:bg-zinc-900 dark:text-white">
     <header
-      class="w-full fixed top-0 left-0 navbar-blur bg-[#1c1c1c]/30 h-[var(--header-height)] z-50 border-b border-white/10"
+      class="fixed top-0 left-0 h-20 border-b-2 border-black dark:border-white/50 w-full bg-white dark:bg-zinc-900"
     >
       <div
-        class="h-full max-w-6xl mx-auto px-4 hidden md:grid md:grid-cols-[20%,1fr,20%] md:place-items-center"
+        class="flex items-center justify-between max-w-4xl mx-auto h-full px-4"
       >
-        <a href="/" class="font-bold justify-self-start text-xl tracking-wider">
-          Joe Brown
+        <a
+          href="/"
+          class="font-bold justify-self-start text-xl tracking-wider hover:no-underline"
+        >
+          <div
+            class="rounded-md border-2 border-black p-2 dark:bg-zinc-800 hover:bg-slate-200 dark:hover:bg-zinc-700"
+          >
+            JB
+          </div>
         </a>
 
-        <nav class="hidden md:block md:w-full">
-          <ul class="flex justify-center items-center gap-10 lg:gap-16 text-lg">
-            <li class="hover:text-white/50 transition-colors duration-300">
-              <a href="#about">About</a>
-            </li>
-            <li class="hover:text-white/50 transition-colors duration-300">
+        <nav class="">
+          <ul class="flex justify-end items-center gap-6">
+            <li>
               <a href="#experience">Experience</a>
             </li>
-            <li class="hover:text-white/50 transition-colors duration-300">
+            <li>
               <a href="#education">Education</a>
             </li>
-            <li class="hover:text-white/50 transition-colors duration-300">
-              <a href="#contact-me">Contact</a>
+            <li>
+              <a class="button hover:no-underline" href="#contact-me">
+                Contact
+              </a>
             </li>
           </ul>
         </nav>
-        <a
-          href="https://github.com/joe4576"
-          target="_blank"
-          class="hidden md:block justify-self-end text-white hover:text-white/60 transition-colors duration-300"
-        >
-          <svg
-            width="30"
-            height="30"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 97.707 96.807"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"
-              fill="currentColor"
-            />
-          </svg>
-        </a>
-      </div>
-
-      <div
-        class="h-full max-w-[1280px] mx-auto px-4 flex justify-between items-center md:hidden"
-      >
-        <a href="/" class="font-bold justify-self-start text-xl tracking-wider">
-          Joe Brown
-        </a>
-        <button
-          id="hamburger"
-          class="button flex justify-end items-center md:hidden text-white"
-          aria-label="Toggle mobile menu"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24px"
-            viewBox="0 -960 960 960"
-            width="24px"
-            fill="currentColor"
-          >
-            <path
-              d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-            />
-          </svg>
-        </button>
-
-        <div id="mobile-menu" class="fixed inset-0 z-100 h-screen mt-20 hidden">
-          <div class="relative z-10 w-full bg-[#3f3f3f] shadow-lg">
-            <nav>
-              <ul class="flex flex-col justify-center">
-                <li>
-                  <a href="#about" class="mobile-item">
-                    <div class="w-full h-full p-4">About</div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#experience" class="mobile-item">
-                    <div class="w-full h-full p-4">Experience</div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#education" class="mobile-item">
-                    <div class="w-full h-full p-4">Education</div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#contact-me" class="mobile-item">
-                    <div class="w-full h-full p-4">Contact</div>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-
-          <div
-            id="close-menu"
-            class="absolute inset-0 top-20 bg-black/40"
-          ></div>
-        </div>
       </div>
     </header>
 
-    <main class="flex flex-col justify-start p-4 pt-0 pb-12 mt-20">
-      <section
-        id="hero"
-        class="h-[var(--hero-height)] flex flex-col gap-2 justify-center items-center text-center"
-      >
-        <h1 class="text-6xl font-bold fade-in-heading">Joe Brown</h1>
-        <h2 class="text-4xl text-white/50 fade-in-heading">
-          Full-Stack Software Engineer
-        </h2>
-      </section>
-      <div class="flex flex-col gap-16 mb-16">
-        <section id="about" class="card">
-          <h3 class="card-title">About me</h3>
-          <div class="card-body">
-            <p>
-              I am a full-stack software engineer with a strong focus on
-              frontend web development. I specialise in Vue and React.
-            </p>
-            <p>
-              I am passionate about building high-quality, user-friendly
-              applications that solve real-world problems.
-            </p>
+    <main
+      class="flex flex-col gap-16 justify-start mt-24 max-w-4xl mx-auto px-4 mb-24"
+    >
+      <section class="mt-16">
+        <div class="flex flex-col-reverse md:flex-row justify-between gap-4">
+          <div class="basis-2/3">
+            <h1 class="text-3xl font-bold">Joe Brown</h1>
+            <h2 class="text-2xl mb-4">Full-Stack Software Engineer</h2>
+
+            <div class="flex flex-col gap-4">
+              <p>
+                I am a full-stack software engineer with a strong focus on
+                frontend web development. I specialise in Vue and React.
+              </p>
+
+              <p>
+                I am passionate about building high-quality, user-friendly
+                applications that solve real-world problems.
+              </p>
+
+              <div class="flex justify-center md:justify-start gap-4">
+                <a
+                  href="https://github.com/joe4576"
+                  target="_blank"
+                  aria-label="GitHub"
+                  class="dark:text-white hover:text-black/60 dark:hover:text-white/60 transition-colors duration-300"
+                >
+                  <svg
+                    width="30"
+                    height="30"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 97.707 96.807"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/joe-brown-282196213/"
+                  target="_blank"
+                  aria-label="LinkedIn"
+                  class="dark:text-white hover:text-black/60 dark:hover:text-white/60 transition-colors duration-300"
+                >
+                  <svg
+                    width="30"
+                    height="30"
+                    version="1.1"
+                    viewBox="0 0 382 382"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889
+	C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056
+	H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806
+	c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1
+	s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73
+	c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079
+	c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426
+	c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472
+	L341.91,330.654L341.91,330.654z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
-        </section>
+          <div class="grow">
+            <div class="flex justify-center h-full">
+              <img
+                src="linkedin-pfp.jpeg"
+                alt="Joe Brown picture"
+                class="size-44 rounded-full border-2 border-black"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section id="experience" class="text-center my-12">
-          <h2 class="title">Experience</h2>
-        </section>
+      <section
+        id="experience"
+        class="text-center section-divider flex items-center gap-8"
+      >
+        <div class="divider"></div>
+        <h2 class="text-2xl font-semibold">Experience</h2>
+        <div class="divider"></div>
+      </section>
 
-        <section class="card">
+      <div class="card">
+        <div class="card-header">
           <h3 class="card-title">
             <a
               href="https://givenergy.co.uk/"
@@ -172,52 +157,50 @@
               >GivEnergy</a
             >
           </h3>
-
-          <h4
-            id="current-job-tenure"
-            class="card-subtitle"
-            data-start-date="2024-03-05"
-          >
-            March 2024 - Present
+          <h4 class="card-subtitle flex flex-col items-end">
+            <span> March 2024 - Present </span>
+            <span id="current-job-tenure" data-start-date="2024-03-05"></span>
           </h4>
-
-          <div class="card-body">
-            <p>
-              I joined GivEnergy in March 2024 as a mid-level full-stack
-              developer.
-            </p>
-            <p>
-              GivEnergy is the UK's top provider of residential battery storage
-              systems. They supply the hardware and software to empower
-              homeowners to take control of their energy usage.
-            </p>
-            <p>
-              I am currently leading the frontend development of a new
-              cross-platform mobile application, leveraging React, Tailwind,
-              Ionic, and Capacitor.
-            </p>
-            <p>
-              In addition to my development work, I am mentoring junior
-              developers and supporting the professional growth of the team by
-              providing guidance on TypeScript, React, CSS, and general software
-              engineering best practices.
-            </p>
-            <p>
-              I am also working on a new event-driven service that ingests IoT
-              data and calculates energy usage in near real-time.
-            </p>
-            <p>
-              Furthermore, I have worked cross-team on numerous projects, most
-              notably the company's SSO service. I have implemented features to
-              improve security, such as integrating Microsoft Entra SAML login
-              for staff, and MFA through Cognito for all users.
-            </p>
-          </div>
-        </section>
+        </div>
 
         <div class="divider"></div>
 
-        <section class="card">
+        <div class="card-body">
+          <p>
+            I joined GivEnergy in March 2024 as a mid-level full-stack
+            developer.
+          </p>
+          <p>
+            GivEnergy is the UK's top provider of residential battery storage
+            systems. They supply the hardware and software to empower homeowners
+            to take control of their energy usage.
+          </p>
+          <p>
+            I am currently leading the frontend development of a new
+            cross-platform mobile application, leveraging React, Tailwind,
+            Ionic, and Capacitor.
+          </p>
+          <p>
+            In addition to my development work, I am mentoring junior developers
+            and supporting the professional growth of the team by providing
+            guidance on TypeScript, React, CSS, and general software engineering
+            best practices.
+          </p>
+          <p>
+            I am also working on a new event-driven service that ingests IoT
+            data and calculates energy usage in near real-time.
+          </p>
+          <p>
+            Furthermore, I have worked cross-team on numerous projects, most
+            notably the company's SSO service. I have implemented features to
+            improve security, such as integrating Microsoft Entra SAML login for
+            staff, and MFA through Cognito for all users.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
           <h3 class="card-title">
             <a
               href="https://premiersystems.com/"
@@ -227,78 +210,90 @@
             >
           </h3>
 
-          <h4 class="card-subtitle">July 2021 - February 2024 (2 yrs 8 mos)</h4>
+          <h4 class="card-subtitle flex flex-col items-end">
+            <span> July 2021 - Feb 2024 </span>
+            <span>(2 yrs 8 mos)</span>
+          </h4>
+        </div>
 
-          <div class="card-body">
-            <p>
-              I worked as a frontend developer on BrewMan, one of the UK's
-              leading brewery and distillery management solutions.
-            </p>
-            <p>
-              While my primary focus was on frontend development using Vue,
-              Vuetify, and Sass, my role expanded over time to include backend
-              development with C# and PostgreSQL.
-            </p>
+        <div class="divider"></div>
 
-            <p class="font-bold">Key achievements:</p>
+        <div class="card-body">
+          <p>
+            I worked as a frontend developer on BrewMan, one of the UK's leading
+            brewery and distillery management solutions.
+          </p>
+          <p>
+            While my primary focus was on frontend development using Vue,
+            Vuetify, and Sass, my role expanded over time to include backend
+            development with C# and PostgreSQL.
+          </p>
 
-            <ul class="list">
-              <li>
-                Rebuilt our corporate website from the ground up using Nuxt,
-                improving SEO and maintainability.
-              </li>
-              <li>
-                Developed a scalable, TypeScript-based UI system to enhance code
-                reuse and type safety across the most commonly used areas of
-                BrewMan.
-              </li>
-              <li>
-                Migrated the proprietary authentication system to Firebase and
-                built admin tools in Node.js.
-              </li>
-              <li>
-                Optimised frontend performance as the business scaled,
-                refactoring and improving key areas of the codebase.
-              </li>
-              <li>
-                Championed Vue 3 migration - I migrated a significant amount of
-                our codebase's Vue 2 Options API and class components to the
-                Composition API, ensuring a smooth transition while maintaining
-                stability and backwards compatibility.
-              </li>
-              <li>
-                Implemented a customisable dashboard, both frontend and backend,
-                which became the new homepage of BrewMan.
-              </li>
-              <li>
-                Mentored a new mid-level developer, helping them onboard and
-                gain familiarity with the codebase and tech stack.
-              </li>
-              <li>
-                Played a key role in migrating BrewMan's most widely-used
-                component, our bespoke grid, to AG Grid.
-              </li>
-              <li>
-                Implemented dark mode support, refactoring CSS across the entire
-                application to ensure seamless theme switching.
-              </li>
-              <li>
-                Championed Cypress E2E testing, improving test coverage and
-                reliability.
-              </li>
-              <li>
-                Enhanced our Progressive Web App used by delivery drivers,
-                introducing new features and performance optimisations.
-              </li>
-            </ul>
-          </div>
-        </section>
+          <p class="font-bold">Key achievements:</p>
 
-        <section id="education" class="text-center my-12">
-          <h2 class="title">Education</h2>
-        </section>
+          <ul class="list">
+            <li>
+              Rebuilt our corporate website from the ground up using Nuxt,
+              improving SEO and maintainability.
+            </li>
+            <li>
+              Developed a scalable, TypeScript-based UI system to enhance code
+              reuse and type safety across the most commonly used areas of
+              BrewMan.
+            </li>
+            <li>
+              Migrated the proprietary authentication system to Firebase and
+              built admin tools in Node.js.
+            </li>
+            <li>
+              Optimised frontend performance as the business scaled, refactoring
+              and improving key areas of the codebase.
+            </li>
+            <li>
+              Championed Vue 3 migration - I migrated a significant amount of
+              our codebase's Vue 2 Options API and class components to the
+              Composition API, ensuring a smooth transition while maintaining
+              stability and backwards compatibility.
+            </li>
+            <li>
+              Implemented a customisable dashboard, both frontend and backend,
+              which became the new homepage of BrewMan.
+            </li>
+            <li>
+              Mentored a new mid-level developer, helping them onboard and gain
+              familiarity with the codebase and tech stack.
+            </li>
+            <li>
+              Played a key role in migrating BrewMan's most widely-used
+              component, our bespoke grid, to AG Grid.
+            </li>
+            <li>
+              Implemented dark mode support, refactoring CSS across the entire
+              application to ensure seamless theme switching.
+            </li>
+            <li>
+              Championed Cypress E2E testing, improving test coverage and
+              reliability.
+            </li>
+            <li>
+              Enhanced our Progressive Web App used by delivery drivers,
+              introducing new features and performance optimisations.
+            </li>
+          </ul>
+        </div>
+      </div>
 
-        <section class="card">
+      <section
+        id="education"
+        class="text-center section-divider flex items-center gap-8"
+      >
+        <div class="divider"></div>
+        <h2 class="text-2xl font-semibold">Education</h2>
+        <div class="divider"></div>
+      </section>
+
+      <div class="card">
+        <div class="card-header">
           <h3 class="card-title">
             <a
               href="https://www.bournemouth.ac.uk/"
@@ -308,54 +303,56 @@
             >
           </h3>
 
-          <h4 class="card-subtitle">September 2019 - June 2023</h4>
-
-          <div class="card-body">
-            <div class="flex flex-col gap-1">
-              <span><strong>Grade:</strong> First</span>
-              <span>
-                <strong>Title:</strong> BSc (Hons) Software Engineering
-              </span>
-            </div>
-            <p>
-              I began university in September 2019, studying Computing, and
-              later switched my degree title to Software Engineering before my
-              final year.
-            </p>
-
-            <p class="font-bold">Key modules studied:</p>
-
-            <ul class="list">
-              <li>Software Quality and Testing</li>
-              <li>Advanced Development</li>
-              <li>Deep Learning</li>
-              <li>Networks and Cyber Security</li>
-              <li>Systems Design</li>
-              <li>Data and Databases</li>
-            </ul>
-
-            <p>
-              For my
-              <a
-                href="https://github.com/joe4576/BrewRep"
-                target="_blank"
-                class="underline"
-                >Final Year Project</a
-              >, I developed a web-based CRM application for sales
-              representatives in the brewery and distillery industry, designed
-              to integrate with BrewMan. The project was built based on
-              requirements gathered from the sales team at Premier Systems.
-            </p>
-            <p>
-              Bournemouth University selected my dissertation as a reference for
-              future final-year students.
-            </p>
-          </div>
-        </section>
+          <h4 class="text-end">Sept 2019 - June 2023</h4>
+        </div>
 
         <div class="divider"></div>
 
-        <section class="card">
+        <div class="card-body">
+          <div class="flex flex-col gap-1">
+            <span><strong>Grade:</strong> First</span>
+            <span>
+              <strong>Title:</strong> BSc (Hons) Software Engineering
+            </span>
+          </div>
+          <p>
+            I began university in September 2019, studying Computing, and later
+            switched my degree title to Software Engineering before my final
+            year.
+          </p>
+
+          <p class="font-bold">Key modules studied:</p>
+
+          <ul class="list">
+            <li>Software Quality and Testing</li>
+            <li>Advanced Development</li>
+            <li>Deep Learning</li>
+            <li>Networks and Cyber Security</li>
+            <li>Systems Design</li>
+            <li>Data and Databases</li>
+          </ul>
+
+          <p>
+            For my
+            <a
+              href="https://github.com/joe4576/BrewRep"
+              target="_blank"
+              class="underline"
+              >Final Year Project</a
+            >, I developed a web-based CRM application for sales representatives
+            in the brewery and distillery industry, designed to integrate with
+            BrewMan. The project was built based on requirements gathered from
+            the sales team at Premier Systems.
+          </p>
+          <p>
+            Bournemouth University selected my dissertation as a reference for
+            future final-year students.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
           <h3 class="card-title">
             <a
               href="https://barton-peveril.ac.uk/"
@@ -364,69 +361,53 @@
               >Barton Peveril Sixth Form College</a
             >
           </h3>
-          <h4 class="card-subtitle">September 2017 - June 2019</h4>
-          <div class="card-body">
-            <div class="flex flex-col gap-1">
-              <span><strong>Grade:</strong> AAB</span>
-              <span
-                ><strong>Subjects:</strong> Computer Science, Maths,
-                Economics</span
-              >
-            </div>
-            <p>
-              For my 2nd year computer science project, I built a maze-solving
-              CLI application in VB.NET that implemented both Dijkstra's
-              algorithm and the A* pathfinding algorithm.
-            </p>
-            <p>
-              This application parsed an image of a maze, with a start and end
-              point, and output the same image overlaid with the shortest path
-              between the two points. It also rendered the path finding process
-              in the console, step by step, animated in real time.
-            </p>
-          </div>
-        </section>
+          <h4 class="text-end">Sept 2017 - June 2019</h4>
+        </div>
 
         <div class="divider"></div>
 
-        <section id="contact-me">
-          <div
-            class="flex flex-col sm:flex-row justify-center items-center gap-12 sm:gap-16"
-          >
-            <a
-              href="https://www.linkedin.com/in/joe-brown-282196213/"
-              target="_blank"
-              aria-label="LinkedIn Profile"
-            >
-              <img
-                class="w-52 h-auto"
-                src="/logos/linkedin.webp"
-                alt="LinkedIn Logo"
-              />
-            </a>
-
-            <a
-              href="https://github.com/joe4576"
-              target="_blank"
-              class="text-white hover:text-white/60 transition-colors duration-300"
-              aria-label="GitHub Profile"
-            >
-              <svg
-                width="52"
-                height="52"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 97.707 96.807"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"
-                  fill="currentColor"
-                />
-              </svg>
-            </a>
+        <div class="card-body">
+          <div class="flex flex-col gap-1">
+            <span><strong>Grade:</strong> AAB</span>
+            <span>
+              <strong>Subjects:</strong> Computer Science, Maths, Economics
+            </span>
           </div>
-        </section>
+          <p>
+            For my 2nd year computer science project, I built a maze-solving CLI
+            application in VB.NET that implemented both Dijkstra's algorithm and
+            the A* pathfinding algorithm.
+          </p>
+          <p>
+            This application parsed an image of a maze, with a start and end
+            point, and output the same image overlaid with the shortest path
+            between the two points. It also rendered the path finding process in
+            the console, step by step, animated in real time.
+          </p>
+        </div>
+      </div>
+
+      <section
+        id="contact-me"
+        class="text-center section-divider flex items-center gap-8"
+      >
+        <div class="divider"></div>
+        <h2 class="text-2xl font-semibold">Contact</h2>
+        <div class="divider"></div>
+      </section>
+
+      <div class="flex justify-center">
+        <a
+          href="https://www.linkedin.com/in/joe-brown-282196213/"
+          target="_blank"
+          aria-label="LinkedIn Profile"
+        >
+          <img
+            class="w-36 h-auto"
+            src="/logos/linkedin.webp"
+            alt="LinkedIn Logo"
+          />
+        </a>
       </div>
     </main>
   </body>

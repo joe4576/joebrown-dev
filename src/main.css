@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: dark;
-  --header-height: 5rem;
-  --hero-height: calc(100svh - var(--header-height));
+.shadow {
+  --tw-shadow: 4px 4px 0px 0px black;
+  --tw-shadow-colored: 0px 0px black;
 }
 
-.button {
-  @apply rounded-full p-2 hover:bg-white/5 transition-colors duration-300;
+.shadow-none {
+  --tw-shadow: none;
+  --tw-shadow-colored: none;
 }
 
 .title {
@@ -25,69 +25,29 @@
 }
 
 .card {
-  @apply flex flex-col max-w-lg sm:max-w-xl md:max-w-2xl mx-auto;
+  @apply rounded-md shadow border-[2px] border-black bg-slate-100 dark:bg-zinc-800;
 }
 
-.card-title {
-  @apply text-4xl;
-}
-
-.card-subtitle {
-  @apply text-xl text-white/60 mt-2;
+.card-header {
+  @apply flex items-center justify-between p-4 gap-4;
 }
 
 .card-body {
-  @apply flex flex-col gap-5 mt-6;
+  @apply p-4 flex flex-col gap-5;
 }
 
-#mobile-menu li {
-  @apply hover:bg-[#323232];
+.card-title {
+  @apply text-2xl;
 }
 
 .divider {
-  @apply border-t border-white/50 w-1/6 mx-auto;
+  @apply border w-full border-black dark:border-white/50;
 }
 
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+a {
+  @apply hover:underline;
 }
 
-.fade-in-heading {
-  animation: fadeInDown 2s forwards;
-  opacity: 0;
-}
-
-.background {
-  background-color: #3f3f3f;
-
-  background: linear-gradient(to bottom, #323232 0%, #3f3f3f 40%, #1c1c1c 150%),
-    linear-gradient(
-      to top,
-      rgba(255, 255, 255, 0.4) 0%,
-      rgba(0, 0, 0, 0.25) 200%
-    );
-
-  background-blend-mode: multiply;
-}
-
-/* Firefox can't render gradients properly */
-@supports (-moz-appearance: none) {
-  .background {
-    background: none;
-    background-color: #3f3f3f;
-    background-blend-mode: normal;
-  }
-}
-
-.navbar-blur {
-  backdrop-filter: blur(28px);
-  -webkit-backdrop-filter: blur(28px);
+.button {
+  @apply rounded-md shadow p-2 border-[2px] border-black transition-all hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none bg-slate-100 dark:bg-zinc-800 hover:bg-slate-200 dark:hover:bg-zinc-700;
 }
