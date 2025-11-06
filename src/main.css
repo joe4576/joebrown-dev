@@ -2,30 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-.shadow {
-  --tw-shadow: 4px 4px 0px 0px black;
-  --tw-shadow-colored: 0px 0px black;
-}
-
-.shadow-none {
-  --tw-shadow: none;
-  --tw-shadow-colored: none;
-}
-
-.title {
-  @apply text-5xl;
-}
-
-.list {
+ul {
   @apply list-disc ml-4;
 }
 
-.list > li {
+ul > li {
   @apply mb-2;
 }
 
 .card {
-  @apply rounded-md shadow border-[2px] border-black bg-slate-100 dark:bg-zinc-800;
+  @apply rounded-md border-[2px] border-black dark:border-none bg-slate-100 dark:bg-zinc-800;
 }
 
 .card-header {
@@ -49,5 +35,5 @@ a {
 }
 
 .button {
-  @apply rounded-md shadow p-2 border-[2px] border-black transition-all hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none bg-slate-100 dark:bg-zinc-800 hover:bg-slate-200 dark:hover:bg-zinc-700;
+  @apply rounded-md p-2 border-[2px] border-black dark:border-white/50 transition-all bg-slate-100 dark:bg-zinc-800 hover:bg-slate-200 dark:hover:bg-zinc-700;
 }
