@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "joebrown-dev",
+  "compatibility_date": "2026-02-21",
+  "assets": {
+    "directory": "./dist",
+  },
+  "observability": {
+    "enabled": true,
+  },
+  "compatibility_flags": ["nodejs_compat"],
+}
