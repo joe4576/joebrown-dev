@@ -18,21 +18,22 @@ const calculateTimeSinceDateInclusive = (date) => {
 };
 
 const setCurrentJobTenure = () => {
-  const tenure = document.getElementById("current-job-tenure");
-  const startDate = tenure?.dataset.startDate;
+  document.querySelectorAll(".current-job-tenure").forEach((tenure) => {
+    const startDate = tenure?.dataset.startDate;
 
-  if (!startDate) {
-    return;
-  }
+    if (!startDate) {
+      return;
+    }
 
-  const { years, months } = calculateTimeSinceDateInclusive(startDate);
+    const { years, months } = calculateTimeSinceDateInclusive(startDate);
 
-  const monthString = months === 1 ? `${months} mo` : `${months} mos`;
-  const yearString = years === 1 ? `${years} yr` : `${years} yrs`;
+    const monthString = months === 1 ? `${months} mo` : `${months} mos`;
+    const yearString = years === 1 ? `${years} yr` : `${years} yrs`;
 
-  const duration = years > 0 ? `${yearString} ${monthString}` : monthString;
+    const duration = years > 0 ? `${yearString} ${monthString}` : monthString;
 
-  tenure.innerText = `(${duration})`;
+    tenure.innerText = `(${duration})`;
+  });
 };
 
 setCurrentJobTenure();

@@ -1,43 +1,62 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-accent: #3dc6b1;
+  --color-background: #060c11;
+}
+
+@utility focused {
+  @apply focus:outline-2 focus:outline-accent;
+}
+
+.section-header {
+  @apply sticky top-0 z-20 bg-background p-6 text-center text-xl font-semibold tracking-widest text-white uppercase;
+}
+
+.section-container {
+  @apply flex flex-col gap-6 md:grid md:grid-cols-[20%_1fr];
+}
+
+.section-aside {
+  @apply hidden flex-col gap-2 md:flex;
+}
+
+.section-aside-mobile {
+  @apply flex gap-2 text-sm text-white/50 md:hidden;
+}
+
+.section-content {
+  @apply flex flex-col gap-4;
+}
+
+.section-content-header {
+  @apply flex flex-col gap-1;
+}
+
+.section-content-header-title {
+  @apply font-semibold text-white;
+}
+
+.section-content-header-subtitle {
+  @apply text-sm text-white/50;
+}
+
+.section-content-body {
+  @apply flex flex-col gap-6 text-sm;
+}
 
 ul {
-  @apply list-disc ml-6 sm:ml-8;
+  @apply list-disc space-y-2 pl-5 marker:text-xl marker:text-accent;
 }
 
-ul > li {
-  @apply mb-4;
+.chip-container {
+  @apply flex flex-wrap gap-2;
 }
 
-.card {
-  @apply rounded-md border-[2px] border-black dark:border-none bg-slate-100 dark:bg-zinc-800;
-}
-
-.card-header {
-  @apply flex flex-col sm:flex-row items-start sm:items-center justify-between p-6 gap-2;
-}
-
-.card-subtitle {
-  @apply flex flex-row sm:flex-col items-end text-end gap-2 justify-between;
-}
-
-.card-body {
-  @apply p-6 flex flex-col gap-5;
-}
-
-.card-title {
-  @apply text-2xl;
-}
-
-.divider {
-  @apply border w-full border-black dark:border-white/50;
+.chip {
+  @apply rounded-xl bg-accent/10 px-2 py-1 text-xs text-accent;
 }
 
 a {
-  @apply hover:underline;
-}
-
-.button {
-  @apply rounded-md p-2 border-[2px] border-black dark:border-white/50 transition-all bg-slate-100 dark:bg-zinc-800 hover:bg-slate-200 dark:hover:bg-zinc-700;
+  @apply focused hover:underline;
 }

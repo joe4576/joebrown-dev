@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth scroll-py-32">
+<html lang="en" class="overflow-x-hidden scheme-dark">
   <head>
     <meta charset="UTF-8" />
 
@@ -9,444 +9,467 @@
 
     <meta
       name="description"
-      content="Joe Brown | Full Stack Software Engineer"
+      content="Joe Brown | Full Stack Software Developer"
     />
 
     <link rel="stylesheet" href="./main.css" />
 
     <script src="./main.js" type="module" defer></script>
 
-    <title>Joe Brown | Full Stack Software Engineer</title>
+    <title>Joe Brown | Full Stack Software Developer</title>
   </head>
 
-  <body class="relative bg-white dark:bg-zinc-900 dark:text-white">
+  <body
+    class="mx-auto flex flex-col bg-background px-6 text-white/70 md:max-w-2xl md:px-24 lg:grid lg:max-w-6xl lg:grid-cols-[35%_1fr] lg:gap-32"
+  >
     <header
-      class="fixed top-0 left-0 h-20 border-b-2 border-black dark:border-white/50 w-full bg-inherit"
+      class="flex flex-col items-center gap-8 pt-24 pb-8 text-center lg:sticky lg:top-0 lg:max-h-screen lg:items-start lg:py-24 lg:text-start"
     >
-      <div
-        class="flex items-center justify-between max-w-3xl mx-auto h-full px-4"
-      >
+      <img
+        src="linkedin-pfp.webp"
+        alt="Joe Brown picture"
+        class="size-44 rounded-full"
+        fetchpriority="high"
+      />
+
+      <div class="flex flex-col items-center gap-2 lg:items-start">
+        <h1 class="text-5xl text-white">Joe Brown</h1>
+        <span class="text-2xl text-accent">Full Stack Software Developer</span>
+        <div class="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+            />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+
+          <span>Southampton, United Kingdom</span>
+        </div>
+      </div>
+
+      <p>
+        I'm a passionate full stack software developer who loves creating
+        systems that feel effortless to use and are built on a solid technical
+        foundation.
+      </p>
+
+      <p>
+        I specialise in frontend development using React and Vue, and have
+        strong experience in the backend using Node and TypeScript.
+      </p>
+
+      <div class="mt-4 flex gap-4">
         <a
-          href="/"
-          class="font-bold text-xl tracking-wider hover:no-underline button"
+          class="hover:text-white"
+          href="https://github.com/joe4576"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub Link"
         >
-          JB
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+            />
+            <path d="M9 18c-4.51 2-5-2-7-2" />
+          </svg>
         </a>
 
-        <nav class="flex justify-end items-center gap-6">
-          <a class="hidden md:block" href="#experience">Experience</a>
-          <a class="hidden md:block" href="#education">Education</a>
-          <a class="button hover:no-underline" href="#contact-me"> Contact </a>
-        </nav>
+        <a
+          class="hover:text-white"
+          href="https://www.linkedin.com/in/joe-brown-282196213/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn Link"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+            />
+            <rect width="4" height="12" x="2" y="9" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+        </a>
       </div>
     </header>
 
-    <main
-      class="flex flex-col gap-16 justify-start mt-20 max-w-3xl mx-auto px-4 mb-24"
-    >
-      <section class="mt-16">
-        <div class="flex justify-between gap-8">
-          <div class="flex flex-col gap-8">
-            <div
-              class="flex flex-col md:flex-row items-center md:items-start gap-8 text-center md:text-start"
+    <main class="flex flex-col gap-12 py-12 pt-0 lg:py-24">
+      <h2 class="section-header">Experience</h2>
+
+      <section class="section-container">
+        <div class="section-aside">
+          <span>Dec 2025 &ndash; Present</span>
+          <span class="current-job-tenure" data-start-date="2025-12-09"></span>
+        </div>
+
+        <div class="section-content">
+          <div class="section-content-header">
+            <a
+              class="section-content-header-title"
+              href="https://ev.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="EV Link"
             >
-              <img
-                src="linkedin-pfp.webp"
-                alt="Joe Brown picture"
-                class="size-44 rounded-full border-2 border-black dark:border-white/50"
-              />
-
-              <div class="flex flex-col gap-2 justify-center h-full">
-                <h1 class="text-4xl font-bold">Joe Brown</h1>
-                <h2 class="text-2xl">Full-Stack Software Engineer</h2>
-                <div
-                  class="flex items-center gap-2 text-black/60 dark:text-white/60"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
-                    />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-
-                  <h3 class="text-xl">Southampton, United Kingdom</h3>
-                </div>
-              </div>
+              EV Financial Solutions
+            </a>
+            <span class="section-content-header-subtitle">
+              Mid-Level Full Stack Developer
+            </span>
+            <div class="section-aside-mobile">
+              <span>Dec 2025 &ndash; Present</span>
+              <span
+                class="current-job-tenure"
+                data-start-date="2025-12-09"
+              ></span>
             </div>
+          </div>
 
-            <div class="flex flex-col gap-4 text-center md:text-start">
-              <p>
-                I'm a passionate full-stack software engineer who loves creating
-                systems that feel effortless to use and are built on a solid
-                technical foundation.
-              </p>
+          <div class="chip-container">
+            <div class="chip">React</div>
+            <div class="chip">TypeScript</div>
+            <div class="chip">Node.js</div>
+            <div class="chip">GraphQL</div>
+            <div class="chip">AWS</div>
+          </div>
 
-              <p>
-                I specialise in frontend development using React and Vue, and
-                have strong experience in the backend using Node and TypeScript.
-              </p>
-            </div>
-
-            <div
-              class="flex justify-center md:justify-start gap-8 mt-8 md:mt-0"
-            >
-              <a
-                href="https://github.com/joe4576"
-                target="_blank"
-                aria-label="GitHub"
-                class="dark:text-white hover:text-black/60 dark:hover:text-white/60 transition-colors duration-300"
-              >
-                <svg
-                  width="30"
-                  height="30"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 97.707 96.807"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/joe-brown-282196213/"
-                target="_blank"
-                aria-label="LinkedIn"
-                class="dark:text-white hover:text-black/60 dark:hover:text-white/60 transition-colors duration-300"
-              >
-                <svg width="30" height="30" version="1.1" viewBox="0 0 382 382">
-                  <path
-                    fill="currentColor"
-                    d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889
-	C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056
-	H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806
-	c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1
-	s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73
-	c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079
-	c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426
-	c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472
-	L341.91,330.654L341.91,330.654z"
-                  />
-                </svg>
-              </a>
-            </div>
+          <div class="section-content-body">
+            <p>
+              EV, formerly EValue, provides a range of services centred on
+              financial planning and investment technology. They offer solutions
+              that help individuals and financial advisors understand and manage
+              investment risk, assess suitability, and create personalised
+              financial plans.
+            </p>
+            <p>
+              I joined this company in December 2025 as a mid-level full stack
+              developer.
+            </p>
           </div>
         </div>
       </section>
 
-      <section id="experience" class="text-center flex items-center gap-8">
-        <div class="divider"></div>
-        <h2 class="text-2xl font-semibold">Experience</h2>
-        <div class="divider"></div>
+      <section class="section-container">
+        <div class="section-aside">
+          <span>Mar 2024 &ndash; Dec 2025</span>
+          <span>(1 yr 10 mos)</span>
+        </div>
+
+        <div class="section-content">
+          <div class="section-content-header">
+            <a
+              class="section-content-header-title"
+              href="https://givenergy.co.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GivEnergy Link"
+            >
+              GivEnergy
+            </a>
+            <span class="section-content-header-subtitle">
+              Mid-Level Full Stack Developer
+            </span>
+            <div class="section-aside-mobile">
+              <span>Mar 2024 &ndash; Dec 2025</span>
+              <span>(1 yr 10 mos)</span>
+            </div>
+          </div>
+
+          <div class="chip-container">
+            <div class="chip">React</div>
+            <div class="chip">Tailwind</div>
+            <div class="chip">TypeScript</div>
+            <div class="chip">Node.js</div>
+            <div class="chip">AWS</div>
+            <div class="chip">Cloudflare</div>
+          </div>
+
+          <div class="section-content-body">
+            <p>
+              I worked as a mid-level full stack developer at GivEnergy, the UK
+              market leader in home energy storage solutions.
+            </p>
+
+            <ul>
+              <li>
+                Led a team of developers to deliver a greenfield cross-platform
+                mobile application using React, Tailwind, Ionic, and Capacitor.
+                I designed and implemented the core architecture to ensure
+                long-term maintainability, introduced Playwright E2E testing,
+                and established CI/CD pipelines with GitHub Actions.
+              </li>
+
+              <li>
+                Created an event-driven microservice that ingested 23 million
+                IoT events/day and calculated energy usage in real time. This
+                service was built on AWS, using Kinesis, Firehose, DynamoDB, S3,
+                Athena, Glue, Lambda and API Gateway.
+              </li>
+
+              <li>
+                Built new features into our SSO service, improving security by
+                implementing email-based MFA, adding Azure SAML login for staff
+                and added passwordless login for customers. I also built
+                functionality to seamlessly migrate "legacy" accounts from our
+                web portal to SSO. This service is built on Cloudflare,
+                utilising Workers, Pages, D1, KV, AWS Cognito for
+                authentication, and React + Tailwind on the frontend.
+              </li>
+
+              <li>
+                Contributed to numerous cross-team projects, including creating
+                a framework-agnostic frontend library to visualise hardware
+                topologies and interface with our new Home Energy Management
+                System.
+              </li>
+
+              <li>
+                Contributed to infrastructure improvements. I was involved in
+                migrating our monorepo from npm to pnpm. I rewrote several
+                GitHub Actions, notably the project detection step, which
+                improved from 4 minutes to 10 seconds.
+              </li>
+
+              <li>
+                Mentored multiple junior developers, teaching core software
+                engineering principles, and helped Flutter developers skill up
+                in React and TypeScript.
+              </li>
+
+              <li>
+                Conducted technical interviews for a junior full stack developer
+                role and a web developer role.
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
 
-      <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">
-            <a href="https://www.ev.uk/" target="_blank">
-              EV - Financial Solutions
-            </a>
-          </h3>
-
-          <h4 class="card-subtitle">
-            <span> Dec 2025 - Present </span>
-            <span id="current-job-tenure" data-start-date="2025-12-09"></span>
-          </h4>
+      <section class="section-container">
+        <div class="section-aside">
+          <span>July 2021 &ndash; Feb 2024</span>
+          <span>(2 yrs 8 mos)</span>
         </div>
 
-        <div class="divider"></div>
-
-        <div class="card-body">
-          <p>
-            EV, formerly EValue, provides a range of services centred on
-            financial planning and investment technology. They offer solutions
-            that help individuals and financial advisors understand and manage
-            investment risk, assess suitability, and create personalized
-            financial plans.
-          </p>
-          <p>
-            I joined this company in December 2025 as a mid-level full stack
-            developer.
-          </p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">
-            <a href="https://givenergy.co.uk/" target="_blank">GivEnergy</a>
-          </h3>
-
-          <h4 class="card-subtitle">
-            <span> Mar 2024 - Dec 2025 </span>
-            <span>(1 yr 10 mos)</span>
-          </h4>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="card-body">
-          <p>
-            I worked as a mid-level full stack developer at GivEnergy, the UK
-            market leader in home energy storage solutions.
-          </p>
-
-          <ul>
-            <li>
-              Led a team of developers to deliver a greenfield cross-platform
-              mobile application using React, Tailwind, Ionic, and Capacitor. I
-              designed and implemented the core architecture to ensure long-term
-              maintainability, introduced Playwright E2E testing, and
-              established CI/CD pipelines with GitHub Actions.
-            </li>
-
-            <li>
-              Created an event-driven microservice that ingested 23 million IoT
-              events/day and calculated energy usage in real time. This service
-              was built on AWS, using Kinesis, Firehose, DynamoDB, S3, Athena,
-              Glue, Lambda and API Gateway.
-            </li>
-
-            <li>
-              Built new features into our SSO service, improving security by
-              implementing email-based MFA, adding Azure SAML login for staff
-              and added passwordless login for customers. I also built
-              functionality to seamlessly migrate "legacy" accounts from our web
-              portal to SSO. This service is built on Cloudflare, utilising
-              Workers, Pages, D1, KV, AWS Cognito for authentication, and React
-              + Tailwind on the frontend.
-            </li>
-
-            <li>
-              Contributed to numerous cross-team projects, including creating a
-              framework-agnostic frontend library to visualise hardware
-              topologies and interface with our new Home Energy Management
-              System.
-            </li>
-
-            <li>
-              Contributed to infrastructure improvements. I was involved in
-              migrating our monorepo from npm to pnpm. I rewrote several GitHub
-              Actions, notably the project detection step, which improved from 4
-              minutes to 10 seconds.
-            </li>
-
-            <li>
-              Mentored multiple junior developers, teaching core software
-              engineering principles, and helped Flutter developers skill up in
-              React and TypeScript.
-            </li>
-
-            <li>
-              Conducted technical interviews for a junior full-stack developer
-              role and a web developer role.
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">
-            <a href="https://premiersystems.com/" target="_blank">
+        <div class="section-content">
+          <div class="section-content-header">
+            <a
+              class="section-content-header-title"
+              href="https://premiersystems.co.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Premier Systems Link"
+            >
               Premier Systems
             </a>
-          </h3>
+            <span class="section-content-header-subtitle">
+              Frontend Developer (Placement → Graduate)
+            </span>
+            <div class="section-aside-mobile">
+              <span>July 2021 &ndash; Feb 2024</span>
+              <span>(2 yrs 8 mos)</span>
+            </div>
+          </div>
 
-          <h4 class="card-subtitle">
-            <span> July 2021 - Feb 2024 </span>
-            <span>(2 yrs 8 mos)</span>
-          </h4>
+          <div class="chip-container">
+            <div class="chip">Vue</div>
+            <div class="chip">Vuetify</div>
+            <div class="chip">TypeScript</div>
+            <div class="chip">C#</div>
+            <div class="chip">PostgreSQL</div>
+            <div class="chip">GCP</div>
+          </div>
+
+          <div class="section-content-body">
+            <p>
+              I worked as a frontend developer on BrewMan, one of the UK's
+              leading brewery and distillery management solutions.
+            </p>
+
+            <p>
+              While my primary focus was on frontend development using Vue,
+              Vuetify, and Sass, my role expanded over time to include backend
+              development with C# and PostgreSQL.
+            </p>
+
+            <ul>
+              <li>
+                Rebuilt our corporate website from the ground up using Nuxt,
+                improving SEO and maintainability.
+              </li>
+              <li>
+                Developed a scalable, TypeScript-based UI system to enhance code
+                reuse and type safety across the most commonly used areas of
+                BrewMan.
+              </li>
+              <li>
+                Migrated the proprietary authentication system to Firebase and
+                built admin tools in Node.js.
+              </li>
+              <li>
+                Optimised frontend performance as the business scaled,
+                refactoring and improving key areas of the codebase.
+              </li>
+              <li>
+                Championed Vue 3 migration - I migrated a significant amount of
+                our codebase's Vue 2 Options API and class components to the
+                Composition API, ensuring a smooth transition while maintaining
+                stability and backwards compatibility.
+              </li>
+              <li>
+                Implemented a customisable dashboard, both frontend and backend,
+                which became the new homepage of BrewMan.
+              </li>
+              <li>
+                Mentored a new mid-level developer, helping them onboard and
+                gain familiarity with the codebase and tech stack.
+              </li>
+              <li>
+                Played a key role in migrating BrewMan's most widely-used
+                component, our bespoke grid, to AG Grid.
+              </li>
+              <li>
+                Implemented dark mode support, refactoring CSS across the entire
+                application to ensure seamless theme switching.
+              </li>
+              <li>
+                Championed Cypress E2E testing, improving test coverage and
+                reliability.
+              </li>
+              <li>
+                Enhanced our Progressive Web App used by delivery drivers,
+                introducing new features and performance optimisations.
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <div class="divider"></div>
-
-        <div class="card-body">
-          <p>
-            I worked as a frontend developer on BrewMan, one of the UK's leading
-            brewery and distillery management solutions.
-          </p>
-          <p>
-            While my primary focus was on frontend development using Vue,
-            Vuetify, and Sass, my role expanded over time to include backend
-            development with C# and PostgreSQL.
-          </p>
-
-          <ul>
-            <li>
-              Rebuilt our corporate website from the ground up using Nuxt,
-              improving SEO and maintainability.
-            </li>
-            <li>
-              Developed a scalable, TypeScript-based UI system to enhance code
-              reuse and type safety across the most commonly used areas of
-              BrewMan.
-            </li>
-            <li>
-              Migrated the proprietary authentication system to Firebase and
-              built admin tools in Node.js.
-            </li>
-            <li>
-              Optimised frontend performance as the business scaled, refactoring
-              and improving key areas of the codebase.
-            </li>
-            <li>
-              Championed Vue 3 migration - I migrated a significant amount of
-              our codebase's Vue 2 Options API and class components to the
-              Composition API, ensuring a smooth transition while maintaining
-              stability and backwards compatibility.
-            </li>
-            <li>
-              Implemented a customisable dashboard, both frontend and backend,
-              which became the new homepage of BrewMan.
-            </li>
-            <li>
-              Mentored a new mid-level developer, helping them onboard and gain
-              familiarity with the codebase and tech stack.
-            </li>
-            <li>
-              Played a key role in migrating BrewMan's most widely-used
-              component, our bespoke grid, to AG Grid.
-            </li>
-            <li>
-              Implemented dark mode support, refactoring CSS across the entire
-              application to ensure seamless theme switching.
-            </li>
-            <li>
-              Championed Cypress E2E testing, improving test coverage and
-              reliability.
-            </li>
-            <li>
-              Enhanced our Progressive Web App used by delivery drivers,
-              introducing new features and performance optimisations.
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <section id="education" class="text-center flex items-center gap-8">
-        <div class="divider"></div>
-        <h2 class="text-2xl font-semibold">Education</h2>
-        <div class="divider"></div>
       </section>
 
-      <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">
-            <a href="https://www.bournemouth.ac.uk/" target="_blank">
+      <h2 class="section-header">Education</h2>
+
+      <section class="section-container">
+        <div class="section-aside">
+          <span>Sept 2019 &ndash; June 2023</span>
+        </div>
+
+        <div class="section-content">
+          <div class="section-content-header">
+            <a
+              class="section-content-header-title"
+              href="https://bournemouth.ac.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Bournemouth University Link"
+            >
               Bournemouth University
             </a>
-          </h3>
-
-          <h4 class="card-subtitle">Sept 2019 - June 2023</h4>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="card-body">
-          <div class="flex flex-col gap-1">
-            <span><strong>Grade:</strong> First</span>
-            <span>
-              <strong>Title:</strong> BSc (Hons) Software Engineering
+            <span class="section-content-header-subtitle">
+              BSc (Hons) Software Engineering
             </span>
+            <div class="section-aside-mobile">
+              <span>Sept 2019 &ndash; June 2023</span>
+            </div>
           </div>
 
-          <p class="font-bold">Key modules studied:</p>
+          <span class="text-sm text-accent">First Class</span>
 
-          <ul>
-            <li>Software Quality and Testing</li>
-            <li>Advanced Development</li>
-            <li>Deep Learning</li>
-            <li>Networks and Cyber Security</li>
-            <li>Systems Design</li>
-            <li>Data and Databases</li>
-          </ul>
+          <div class="section-content-body">
+            <p>
+              For my Final Year Project, I developed a web-based CRM application
+              for sales representatives in the brewery and distillery industry,
+              designed to integrate with BrewMan. The project was built based on
+              requirements gathered from the sales team at Premier Systems.
+            </p>
 
-          <p>
-            For my
-            <a
-              href="https://github.com/joe4576/BrewRep"
-              target="_blank"
-              class="underline"
-              >Final Year Project</a
-            >, I developed a web-based CRM application for sales representatives
-            in the brewery and distillery industry, designed to integrate with
-            BrewMan. The project was built based on requirements gathered from
-            the sales team at Premier Systems.
-          </p>
-          <p>
-            Bournemouth University selected my dissertation as a reference for
-            future final-year students.
-          </p>
-        </div>
-      </div>
+            <p>
+              Bournemouth University selected my dissertation as a reference for
+              future final-year students.
+            </p>
+            <p>Key modules studied:</p>
 
-      <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">
-            <a href="https://barton-peveril.ac.uk/" target="_blank">
-              Barton Peveril Sixth Form College
-            </a>
-          </h3>
-
-          <h4 class="card-subtitle">Sept 2017 - June 2019</h4>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="card-body">
-          <div class="flex flex-col gap-1">
-            <span><strong>Grade:</strong> AAB</span>
-            <span>
-              <strong>Subjects:</strong> Computer Science, Maths, Economics
-            </span>
+            <ul>
+              <li>Software Quality and Testing</li>
+              <li>Advanced Development</li>
+              <li>Deep Learning</li>
+              <li>Networks and Cyber Security</li>
+              <li>Systems Design</li>
+              <li>Data and Databases</li>
+            </ul>
           </div>
-          <p>
-            For my 2nd year computer science project, I built a maze-solving CLI
-            application in VB.NET that implemented both Dijkstra's algorithm and
-            the A* pathfinding algorithm.
-          </p>
-          <p>
-            This application parsed an image of a maze, with a start and end
-            point, and output the same image overlaid with the shortest path
-            between the two points. It also rendered the path finding process in
-            the console, step by step, animated in real time.
-          </p>
         </div>
-      </div>
-
-      <section id="contact-me" class="text-center flex items-center gap-8">
-        <div class="divider"></div>
-        <h2 class="text-2xl font-semibold">Contact</h2>
-        <div class="divider"></div>
       </section>
 
-      <div class="flex justify-center">
-        <a
-          href="https://www.linkedin.com/in/joe-brown-282196213/"
-          target="_blank"
-          aria-label="LinkedIn Profile"
-        >
-          <img
-            class="w-36 h-auto"
-            src="/logos/linkedin.webp"
-            alt="LinkedIn Logo"
-          />
-        </a>
-      </div>
+      <section class="section-container">
+        <div class="section-aside">
+          <span>Sept 2017 &ndash; June 2019</span>
+        </div>
+
+        <div class="section-content">
+          <div class="section-content-header">
+            <a
+              class="section-content-header-title"
+              href="https://barton-peveril.ac.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Barton Peveril Link"
+            >
+              Barton Peveril Sixth Form College
+            </a>
+            <span class="section-content-header-subtitle">
+              Computer Science, Maths, Economics
+            </span>
+            <div class="section-aside-mobile">
+              <span>Sept 2017 &ndash; June 2019</span>
+            </div>
+          </div>
+
+          <span class="text-sm text-accent">AAB</span>
+
+          <div class="section-content-body">
+            <p>
+              For my 2nd year computer science project, I built a maze-solving
+              CLI application in VB.NET that implemented both Dijkstra's
+              algorithm and the A* pathfinding algorithm.
+            </p>
+
+            <p>
+              This application parsed an image of a maze, with a start and end
+              point, and output the same image overlaid with the shortest path
+              between the two points. It also rendered the path finding process
+              in the console, step by step, animated in real time.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
