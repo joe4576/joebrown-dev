@@ -16,7 +16,7 @@
 }
 
 .section-header {
-  @apply sticky top-0 z-20 bg-background p-6 text-center text-xl font-semibold tracking-widest text-white uppercase;
+  @apply sticky top-0 z-20 -mx-6 bg-background p-6 text-center text-xl font-semibold tracking-widest text-white uppercase lg:-mx-1;
 }
 
 .section-container {
@@ -51,16 +51,16 @@
   @apply flex flex-col gap-6 text-sm;
 }
 
-ul {
-  @apply list-disc space-y-2 pl-5 marker:text-xl marker:text-accent;
-}
-
 .chip-container {
   @apply flex flex-wrap gap-2;
 }
 
 .chip {
   @apply rounded-xl bg-accent/10 px-2 py-1 text-xs text-accent;
+}
+
+ul {
+  @apply list-disc space-y-2 pl-5 marker:text-xl marker:text-accent;
 }
 
 a {
