@@ -36,7 +36,7 @@
 }
 
 .section-content-header {
-  @apply flex flex-col gap-1;
+  @apply flex flex-col gap-1 text-lg;
 }
 
 .section-content-header-title {
@@ -48,7 +48,7 @@
 }
 
 .section-content-body {
-  @apply flex flex-col gap-6 text-sm;
+  @apply flex flex-col gap-6;
 }
 
 .chip-container {
@@ -60,7 +60,7 @@
 }
 
 ul {
-  @apply list-disc space-y-2 pl-5 marker:text-xl marker:text-accent;
+  @apply flex list-disc flex-col gap-6 pl-5 marker:text-xl marker:text-accent;
 }
 
 a {
