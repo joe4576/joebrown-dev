@@ -9,7 +9,7 @@
 
 @theme {
   --color-accent: #3dc6b1;
-  --color-background: #060c11;
+  --color-background: #121212;
 }
 
 @utility focused {
@@ -29,7 +29,7 @@
 }
 
 .section-aside-mobile {
-  @apply flex gap-2 text-sm text-white/50 md:hidden;
+  @apply flex gap-2 text-sm text-white/70 md:hidden;
 }
 
 .section-content {
@@ -45,7 +45,7 @@
 }
 
 .section-content-header-subtitle {
-  @apply text-sm text-white/50;
+  @apply text-sm text-white/70;
 }
 
 .section-content-body {
