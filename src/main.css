@@ -1,73 +1,157 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "Nunito";
-  src: url("/assets/font/Nunito-VariableFont_wght.ttf")
-    format("truetype-variations");
-  font-weight: 100 1000;
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/font/BricolageGrotesque-Variable.woff2")
+    format("woff2-variations");
+  font-weight: 300 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/assets/font/JetBrainsMono-Variable.woff2")
+    format("woff2-variations");
+  font-weight: 100 800;
+  font-display: swap;
 }
 
 @theme {
-  --color-accent: #3dc6b1;
-  --color-background: #121212;
+  --font-sans: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-carbon: #0a0a0a;
+  --color-seam: #262626;
+  --color-bone: #ececec;
+  --color-ash: #adadad;
+  --color-accent: #ff5c8a;
+
+  --animate-rise: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-carbon);
 }
 
 @utility focused {
-  @apply focus:outline-2 focus:outline-accent;
-}
-
-.section-header {
-  @apply sticky top-0 z-20 -mx-6 bg-background p-6 text-center text-xl font-semibold tracking-widest text-white uppercase lg:-mx-1;
-}
-
-.section-container {
-  @apply flex flex-col gap-6 md:grid md:grid-cols-[20%_1fr];
-}
-
-.section-aside {
-  @apply hidden flex-col gap-2 md:flex;
-}
-
-.section-aside-mobile {
-  @apply flex gap-2 text-sm text-white/70 md:hidden;
-}
-
-.section-content {
-  @apply flex flex-col gap-4;
-}
-
-.section-content-header {
-  @apply flex flex-col gap-1 text-lg;
-}
-
-.section-content-header-title {
-  @apply font-semibold text-white;
-}
-
-.section-content-header-subtitle {
-  @apply text-sm text-white/70;
-}
-
-.section-content-body {
-  @apply flex flex-col gap-6;
-}
-
-.chip-container {
-  @apply flex flex-wrap gap-2;
-}
-
-.chip {
-  @apply rounded-xl bg-accent/10 px-2 py-1 text-xs text-accent;
-}
-
-ul {
-  @apply flex list-disc flex-col gap-6 pl-5 marker:text-xl marker:text-accent;
+  @apply focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent;
 }
 
 a {
-  @apply focused hover:underline;
+  @apply focused;
 }
 
-body {
-  font-family: "Nunito", sans-serif;
+.hero-glow {
+  @apply pointer-events-none absolute inset-0;
+  background: radial-gradient(
+    ellipse 60% 50% at 50% 38%,
+    rgb(255 92 138 / 0.08),
+    transparent 70%
+  );
+}
+
+.avatar-hero {
+  @apply size-32 rounded-full ring-1 ring-seam md:size-36;
+  box-shadow: 0 0 60px rgb(255 92 138 / 0.18);
+}
+
+@utility btn {
+  @apply inline-flex items-center gap-2 rounded-full px-6 py-2 font-mono text-sm transition-colors;
+}
+
+.btn-solid {
+  @apply btn bg-bone text-carbon hover:bg-accent;
+}
+
+.btn-ghost {
+  @apply btn border border-seam text-bone hover:border-accent/50 hover:text-accent;
+}
+
+.section-title {
+  @apply mb-14 text-3xl font-semibold tracking-tight text-bone md:text-4xl;
+}
+
+.rail {
+  @apply relative;
+}
+
+.rail::before {
+  content: "";
+  @apply absolute inset-y-2 left-0 w-px bg-seam;
+}
+
+.entry {
+  @apply relative pb-16 pl-8 last:pb-0 md:pb-20 md:pl-12;
+}
+
+.entry-node {
+  @apply absolute top-2 left-0 size-2 -translate-x-1/2 rounded-full bg-accent ring-4 ring-carbon;
+}
+
+.entry-grid {
+  @apply md:grid md:grid-cols-[11rem_1fr] md:gap-10;
+}
+
+.entry-dates {
+  @apply hidden gap-2 font-mono text-sm text-ash md:flex md:flex-col;
+}
+
+.entry-dates-mobile {
+  @apply mt-2 flex flex-wrap gap-2 font-mono text-sm text-ash md:hidden;
+}
+
+.entry-title {
+  @apply w-fit text-xl font-semibold tracking-tight text-bone transition-colors hover:text-accent md:text-2xl;
+}
+
+.entry-role {
+  @apply mt-2 text-ash;
+}
+
+.badge {
+  @apply mt-2 font-mono text-sm tracking-wide text-accent;
+}
+
+.stack-line {
+  @apply mt-6 flex flex-wrap items-center gap-2 font-mono text-sm;
+}
+
+.stack-line li + li::before {
+  content: "\00b7";
+  @apply mr-2 text-accent/60;
+}
+
+.entry-body {
+  @apply mt-6 flex max-w-2xl flex-col gap-4 leading-relaxed text-ash;
+}
+
+.entry-body ul {
+  @apply flex flex-col gap-4;
+}
+
+.entry-body li {
+  @apply relative pl-6;
+}
+
+.entry-body li::before {
+  content: "—";
+  @apply absolute left-0 text-accent/70;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise {
+    animation: none;
+  }
 }
