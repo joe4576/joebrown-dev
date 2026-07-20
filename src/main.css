@@ -53,20 +53,6 @@ a {
   @apply focused;
 }
 
-.hero-glow {
-  @apply pointer-events-none absolute inset-0;
-  background: radial-gradient(
-    ellipse 60% 50% at 50% 38%,
-    rgb(255 92 138 / 0.08),
-    transparent 70%
-  );
-}
-
-.avatar-hero {
-  @apply size-32 rounded-full ring-1 ring-seam md:size-36;
-  box-shadow: 0 0 60px rgb(255 92 138 / 0.18);
-}
-
 @utility btn {
   @apply inline-flex items-center gap-2 rounded-full px-6 py-2 font-mono text-sm transition-colors;
 }
@@ -113,15 +99,15 @@ a {
 }
 
 .entry-title {
-  @apply w-fit text-xl font-semibold tracking-tight text-bone transition-colors hover:text-accent md:text-2xl;
+  @apply text-xl font-semibold tracking-tight text-bone transition-colors hover:text-accent md:-mt-1 md:text-2xl;
 }
 
 .entry-role {
-  @apply mt-2 text-ash;
+  @apply mt-2 text-accent;
 }
 
 .badge {
-  @apply mt-2 font-mono text-sm tracking-wide text-accent;
+  @apply mt-2 font-mono text-sm tracking-wide text-amber-300;
 }
 
 .stack-line {
