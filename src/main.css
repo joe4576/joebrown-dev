@@ -224,23 +224,23 @@ summary:focus {
   gap: 60px;
 }
 
-.contents {
+.page-contents {
   align-self: start;
   padding-top: 7px;
 }
 
-.contents h2 {
+.page-contents h2 {
   margin: 0 0 10px;
   font-size: 19px;
 }
 
-.contents ul {
+.page-contents ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.contents li {
+.page-contents li {
   margin-bottom: 8px;
   font-size: 16px;
 }
@@ -612,7 +612,7 @@ h3 {
     display: block;
   }
 
-  .contents {
+  .page-contents {
     display: none;
   }
 
