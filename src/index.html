@@ -1,527 +1,464 @@
 <!doctype html>
-<html lang="en" class="scheme-dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0a0a0a" />
-    <meta name="darkreader-lock" />
-
+    <meta name="theme-color" content="#0b0c0c" />
     <meta
       name="description"
-      content="Joe Brown | Full Stack Software Developer"
+      content="Joe Brown, a full stack software developer based in Southampton, UK."
     />
-
-    <link
-      rel="preload"
-      href="/assets/font/BricolageGrotesque-Variable.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/assets/font/JetBrainsMono-Variable.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-
     <link rel="stylesheet" href="./main.css" />
-
     <script src="./main.js" type="module" defer></script>
-
-    <title>Joe Brown | Full Stack Software Developer</title>
+    <title>Joe Brown | Full stack software developer</title>
   </head>
 
-  <body class="bg-carbon text-bone antialiased">
-    <div class="mx-auto max-w-4xl px-6 md:px-12">
-      <header class="flex items-center justify-between py-8">
-        <a href="/" class="font-mono text-sm" aria-label="Home">
-          joebrown<span class="text-accent">.dev</span>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="width-container site-header__inner">
+        <a class="site-header__brand" href="/" aria-label="Joe Brown, home">
+          <span class="site-header__mark" aria-hidden="true">JB</span>
+          <span>Joe Brown</span>
         </a>
+        <span class="site-header__description">Software developer</span>
+      </div>
+    </header>
 
-        <p class="flex items-center gap-2 font-mono text-sm">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="size-4 text-accent"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <path
-              d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
-            />
-            <circle cx="12" cy="10" r="3" />
-          </svg>
-          Southampton, UK
-        </p>
-      </header>
-
-      <main>
-        <section
-          class="relative flex min-h-[90svh] flex-col items-center justify-center py-16 text-center"
+    <nav class="service-navigation" aria-label="Primary navigation">
+      <div class="width-container service-navigation__inner">
+        <a class="service-navigation__name" href="/">Developer profile</a>
+        <button
+          class="service-navigation__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="navigation-list"
         >
-          <img
-            src="/assets/images/linkedin-pfp.webp"
-            alt="Joe Brown picture"
-            class="size-32 animate-rise rounded-full ring-1 ring-seam md:size-36"
-            fetchpriority="high"
-          />
+          Menu
+        </button>
+        <ul class="service-navigation__list" id="navigation-list">
+          <li><a href="#about" aria-current="page">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
-          <p
-            class="mt-10 animate-rise font-mono font-medium tracking-widest text-accent uppercase [animation-delay:0.08s]"
-          >
-            Full Stack Developer
-          </p>
+    <div class="width-container">
+      <div class="phase-banner">
+        <strong class="tag tag--blue">Portfolio</strong>
+        <p>This website is a record of my work and education.</p>
+      </div>
+    </div>
 
-          <h1
-            class="mt-6 animate-rise text-[clamp(3.5rem,10vw,5rem)] leading-[0.92] font-bold tracking-[-0.02em] [animation-delay:0.16s]"
-          >
-            Joe Brown<span class="text-accent">.</span>
-          </h1>
+    <main class="width-container page-main" id="main-content">
+      <div class="page-grid">
+        <aside class="contents" aria-label="Page contents">
+          <h2>Contents</h2>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+          </ul>
+        </aside>
 
-          <p
-            class="mt-8 max-w-2xl animate-rise text-lg leading-relaxed text-ash [animation-delay:0.24s] md:text-xl"
-          >
-            I bring deep technical expertise, attention to detail, and clear
-            communication to every stage of delivery, helping teams turn product
-            goals into high-quality software.
-          </p>
+        <div class="page-content">
+          <section class="profile" id="about" aria-labelledby="page-title">
+            <div class="profile__copy">
+              <span class="caption-xl">Full stack software developer</span>
+              <h1 id="page-title">Joe Brown</h1>
+              <p class="lead">
+                I help teams turn product goals into reliable, maintainable
+                software.
+              </p>
+            </div>
+            <img
+              class="profile__photo"
+              src="/assets/images/linkedin-pfp.webp"
+              alt="Joe Brown"
+              width="160"
+              height="160"
+              fetchpriority="high"
+            />
+          </section>
 
-          <div
-            class="mt-12 flex animate-rise flex-wrap items-center justify-center gap-4 [animation-delay:0.32s]"
-          >
+          <div class="inset-text">
+            Based in Southampton, UK. I work across frontend, backend and cloud
+            infrastructure, with a focus on clear communication and careful
+            delivery.
+          </div>
+
+          <div class="button-group" id="contact">
             <a
-              class="btn-ghost"
-              href="https://github.com/joe4576"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub Link"
-            >
-              GitHub
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="size-4"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M7 7h10v10" />
-                <path d="M7 17 17 7" />
-              </svg>
-            </a>
-            <a
-              class="btn-solid"
+              class="button"
               href="https://www.linkedin.com/in/joe-brown-282196213/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="LinkedIn Link"
             >
-              LinkedIn
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="size-4"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M7 7h10v10" />
-                <path d="M7 17 17 7" />
-              </svg>
+              View LinkedIn profile
+            </a>
+            <a
+              class="button button--secondary"
+              href="https://github.com/joe4576"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View GitHub profile
             </a>
           </div>
-        </section>
 
-        <section class="py-16 md:py-24">
-          <h2 class="section-title">Experience</h2>
+          <section
+            class="content-section"
+            id="experience"
+            aria-labelledby="experience-title"
+          >
+            <h2 id="experience-title">Experience</h2>
 
-          <div class="rail">
-            <article class="entry">
-              <span class="entry-node" aria-hidden="true"></span>
+            <article class="record">
+              <div class="record__heading">
+                <div>
+                  <h3>
+                    <a
+                      href="https://ev.uk"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      EV - Financial Solutions
+                    </a>
+                  </h3>
+                  <p class="record__role">Mid-Level Full Stack Developer</p>
+                </div>
+                <strong class="tag tag--green">Current</strong>
+              </div>
 
-              <div class="entry-grid">
-                <div class="entry-dates">
-                  <span>Dec 2025 &ndash; Present</span>
-                  <span
+              <dl class="summary-list">
+                <div class="summary-list__row">
+                  <dt>Dates</dt>
+                  <dd>December 2025 to present</dd>
+                </div>
+                <div class="summary-list__row">
+                  <dt>Time in role</dt>
+                  <dd
                     class="current-job-tenure"
                     data-start-date="2025-12-09"
-                  ></span>
+                  ></dd>
                 </div>
+                <div class="summary-list__row">
+                  <dt>Technologies</dt>
+                  <dd class="tag-list">
+                    <span class="tag tag--grey">React</span>
+                    <span class="tag tag--grey">TypeScript</span>
+                    <span class="tag tag--grey">Node.js</span>
+                    <span class="tag tag--grey">GraphQL</span>
+                    <span class="tag tag--grey">AWS</span>
+                  </dd>
+                </div>
+              </dl>
 
-                <div class="flex flex-col">
-                  <a
-                    class="entry-title"
-                    href="https://ev.uk"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="EV Link"
-                  >
-                    EV - Financial Solutions
-                  </a>
+              <p>
+                EV, formerly EValue, provides financial planning and investment
+                technology. Its tools help people and financial advisers
+                understand investment risk, assess suitability and create
+                personalised financial plans.
+              </p>
+            </article>
 
-                  <p class="entry-role">Mid-Level Full Stack Developer</p>
+            <article class="record">
+              <div class="record__heading">
+                <div>
+                  <h3>
+                    <a
+                      href="https://givenergy.co.uk"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      GivEnergy
+                    </a>
+                  </h3>
+                  <p class="record__role">Mid-Level Full Stack Developer</p>
+                </div>
+              </div>
 
-                  <p class="entry-dates-mobile">
-                    <span>Dec 2025 &ndash; Present</span>
-                    <span
-                      class="current-job-tenure"
-                      data-start-date="2025-12-09"
-                    ></span>
-                  </p>
+              <dl class="summary-list">
+                <div class="summary-list__row">
+                  <dt>Dates</dt>
+                  <dd>March 2024 to December 2025</dd>
+                </div>
+                <div class="summary-list__row">
+                  <dt>Duration</dt>
+                  <dd>1 year 10 months</dd>
+                </div>
+                <div class="summary-list__row">
+                  <dt>Technologies</dt>
+                  <dd class="tag-list">
+                    <span class="tag tag--grey">React</span>
+                    <span class="tag tag--grey">Tailwind</span>
+                    <span class="tag tag--grey">TypeScript</span>
+                    <span class="tag tag--grey">Node.js</span>
+                    <span class="tag tag--grey">AWS</span>
+                    <span class="tag tag--grey">Cloudflare</span>
+                  </dd>
+                </div>
+              </dl>
 
-                  <div class="entry-body">
-                    <p>
-                      EV, formerly EValue, provides a range of services centred
-                      on financial planning and investment technology. They
-                      offer solutions that help individuals and financial
-                      advisors understand and manage investment risk, assess
-                      suitability, and create personalised financial plans.
-                    </p>
-                    <p>
-                      I joined this company in December 2025 as a mid-level full
-                      stack developer.
-                    </p>
-                  </div>
+              <p>
+                I worked on software for GivEnergy, a UK home energy storage
+                company.
+              </p>
 
-                  <ul class="stack-line" aria-label="Tech stack">
-                    <li>React</li>
-                    <li>TypeScript</li>
-                    <li>Node.js</li>
-                    <li>GraphQL</li>
-                    <li>AWS</li>
+              <details class="details">
+                <summary>Read responsibilities and achievements</summary>
+                <div class="details__text">
+                  <ul class="bullet-list">
+                    <li>
+                      Led a team delivering a cross-platform mobile application
+                      with React, Tailwind, Ionic and Capacitor. I designed the
+                      core architecture, introduced Playwright end-to-end tests
+                      and set up CI/CD pipelines with GitHub Actions.
+                    </li>
+                    <li>
+                      Created an event-driven AWS service that ingested 23
+                      million IoT events a day and calculated energy usage in
+                      real time using Kinesis, Firehose, DynamoDB, S3, Athena,
+                      Glue, Lambda and API Gateway.
+                    </li>
+                    <li>
+                      Added email MFA, Azure SAML login, passwordless customer
+                      login and legacy account migration to an SSO service built
+                      on Cloudflare Workers, Pages, D1 and KV, with AWS Cognito.
+                    </li>
+                    <li>
+                      Built a framework-agnostic frontend library for displaying
+                      hardware topologies and working with a new Home Energy
+                      Management System.
+                    </li>
+                    <li>
+                      Helped migrate a monorepo from npm to pnpm and rewrote the
+                      project detection step in GitHub Actions, cutting its run
+                      time from 4 minutes to 10 seconds.
+                    </li>
+                    <li>
+                      Mentored junior developers, helped Flutter developers
+                      learn React and TypeScript, and ran technical interviews.
+                    </li>
                   </ul>
                 </div>
-              </div>
+              </details>
             </article>
 
-            <article class="entry">
-              <span class="entry-node" aria-hidden="true"></span>
-
-              <div class="entry-grid">
-                <div class="entry-dates">
-                  <span>Mar 2024 &ndash; Dec 2025</span>
-                  <span>(1 yr 10 mos)</span>
-                </div>
-
-                <div class="flex flex-col">
-                  <a
-                    class="entry-title"
-                    href="https://givenergy.co.uk"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GivEnergy Link"
-                  >
-                    GivEnergy
-                  </a>
-
-                  <p class="entry-role">Mid-Level Full Stack Developer</p>
-
-                  <p class="entry-dates-mobile">
-                    <span>Mar 2024 &ndash; Dec 2025</span>
-                    <span>(1 yr 10 mos)</span>
+            <article class="record">
+              <div class="record__heading">
+                <div>
+                  <h3>
+                    <a
+                      href="https://premiersystems.co.uk"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Premier Systems
+                    </a>
+                  </h3>
+                  <p class="record__role">
+                    Frontend Developer, placement to graduate
                   </p>
+                </div>
+              </div>
 
-                  <div class="entry-body">
-                    <p>
-                      I worked as a mid-level full stack developer at GivEnergy,
-                      the UK market leader in home energy storage solutions.
-                    </p>
-                    <ul>
-                      <li>
-                        Led a team of developers to deliver a greenfield
-                        cross-platform mobile application using React, Tailwind,
-                        Ionic, and Capacitor. I designed and implemented the
-                        core architecture to ensure long-term maintainability,
-                        introduced Playwright E2E testing, and established CI/CD
-                        pipelines with GitHub Actions.
-                      </li>
-                      <li>
-                        Created an event-driven microservice that ingested 23
-                        million IoT events/day and calculated energy usage in
-                        real time. This service was built on AWS, using Kinesis,
-                        Firehose, DynamoDB, S3, Athena, Glue, Lambda and API
-                        Gateway.
-                      </li>
-                      <li>
-                        Built new features into our SSO service, improving
-                        security by implementing email-based MFA, adding Azure
-                        SAML login for staff and added passwordless login for
-                        customers. I also built functionality to seamlessly
-                        migrate "legacy" accounts from our web portal to SSO.
-                        This service is built on Cloudflare, utilising Workers,
-                        Pages, D1, KV, AWS Cognito for authentication, and React
-                        + Tailwind on the frontend.
-                      </li>
-                      <li>
-                        Contributed to numerous cross-team projects, including
-                        creating a framework-agnostic frontend library to
-                        visualise hardware topologies and interface with our new
-                        Home Energy Management System.
-                      </li>
-                      <li>
-                        Contributed to infrastructure improvements. I was
-                        involved in migrating our monorepo from npm to pnpm. I
-                        rewrote several GitHub Actions, notably the project
-                        detection step, which improved from 4 minutes to 10
-                        seconds.
-                      </li>
-                      <li>
-                        Mentored multiple junior developers, teaching core
-                        software engineering principles, and helped Flutter
-                        developers skill up in React and TypeScript.
-                      </li>
-                      <li>
-                        Conducted technical interviews for a junior full stack
-                        developer role and a web developer role.
-                      </li>
-                    </ul>
-                  </div>
+              <dl class="summary-list">
+                <div class="summary-list__row">
+                  <dt>Dates</dt>
+                  <dd>July 2021 to February 2024</dd>
+                </div>
+                <div class="summary-list__row">
+                  <dt>Duration</dt>
+                  <dd>2 years 8 months</dd>
+                </div>
+                <div class="summary-list__row">
+                  <dt>Technologies</dt>
+                  <dd class="tag-list">
+                    <span class="tag tag--grey">Vue</span>
+                    <span class="tag tag--grey">Vuetify</span>
+                    <span class="tag tag--grey">TypeScript</span>
+                    <span class="tag tag--grey">C#</span>
+                    <span class="tag tag--grey">PostgreSQL</span>
+                    <span class="tag tag--grey">GCP</span>
+                  </dd>
+                </div>
+              </dl>
 
-                  <ul class="stack-line" aria-label="Tech stack">
-                    <li>React</li>
-                    <li>Tailwind</li>
-                    <li>TypeScript</li>
-                    <li>Node.js</li>
-                    <li>AWS</li>
-                    <li>Cloudflare</li>
+              <p>
+                I worked on BrewMan, brewery and distillery management software,
+                starting in frontend development before taking on backend work.
+              </p>
+
+              <details class="details">
+                <summary>Read responsibilities and achievements</summary>
+                <div class="details__text">
+                  <ul class="bullet-list">
+                    <li>
+                      Rebuilt the company website with Nuxt, improving SEO and
+                      maintainability.
+                    </li>
+                    <li>
+                      Developed a TypeScript UI system for common parts of
+                      BrewMan.
+                    </li>
+                    <li>
+                      Migrated the authentication system to Firebase and built
+                      admin tools in Node.js.
+                    </li>
+                    <li>
+                      Improved frontend performance as the business and
+                      application grew.
+                    </li>
+                    <li>
+                      Moved Vue 2 Options API and class components to the Vue 3
+                      Composition API.
+                    </li>
+                    <li>
+                      Built a customisable dashboard across the frontend and
+                      backend.
+                    </li>
+                    <li>Helped move BrewMan's bespoke grid to AG Grid.</li>
+                    <li>
+                      Added dark mode and introduced Cypress end-to-end testing.
+                    </li>
+                    <li>
+                      Added features and performance improvements to the
+                      delivery driver PWA.
+                    </li>
+                    <li>
+                      Mentored a mid-level developer as they joined the team.
+                    </li>
                   </ul>
                 </div>
-              </div>
+              </details>
             </article>
+          </section>
 
-            <article class="entry">
-              <span class="entry-node" aria-hidden="true"></span>
+          <section
+            class="content-section"
+            id="education"
+            aria-labelledby="education-title"
+          >
+            <h2 id="education-title">Education</h2>
 
-              <div class="entry-grid">
-                <div class="entry-dates">
-                  <span>July 2021 &ndash; Feb 2024</span>
-                  <span>(2 yrs 8 mos)</span>
+            <article class="record">
+              <div class="record__heading">
+                <div>
+                  <h3>
+                    <a
+                      href="https://bournemouth.ac.uk"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Bournemouth University
+                    </a>
+                  </h3>
+                  <p class="record__role">BSc (Hons) Software Engineering</p>
                 </div>
+                <strong class="tag tag--purple">First class</strong>
+              </div>
 
-                <div class="flex flex-col">
-                  <a
-                    class="entry-title"
-                    href="https://premiersystems.co.uk"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Premier Systems Link"
-                  >
-                    Premier Systems
-                  </a>
+              <dl class="summary-list">
+                <div class="summary-list__row">
+                  <dt>Dates</dt>
+                  <dd>September 2019 to June 2023</dd>
+                </div>
+                <div class="summary-list__row">
+                  <dt>Final project</dt>
+                  <dd>
+                    A web-based CRM for sales representatives in the brewery and
+                    distillery industry, designed to integrate with BrewMan.
+                  </dd>
+                </div>
+              </dl>
 
-                  <p class="entry-role">
-                    Frontend Developer (Placement &rarr; Graduate)
-                  </p>
+              <p>
+                Bournemouth University selected my dissertation as a reference
+                for future final-year students.
+              </p>
 
-                  <p class="entry-dates-mobile">
-                    <span>July 2021 &ndash; Feb 2024</span>
-                    <span>(2 yrs 8 mos)</span>
-                  </p>
-
-                  <div class="entry-body">
-                    <p>
-                      I worked as a frontend developer on BrewMan, one of the
-                      UK's leading brewery and distillery management solutions.
-                    </p>
-                    <p>
-                      While my primary focus was on frontend development using
-                      Vue, Vuetify, and Sass, my role expanded over time to
-                      include backend development with C# and PostgreSQL.
-                    </p>
-                    <ul>
-                      <li>
-                        Rebuilt our corporate website from the ground up using
-                        Nuxt, improving SEO and maintainability.
-                      </li>
-                      <li>
-                        Developed a scalable, TypeScript-based UI system to
-                        enhance code reuse and type safety across the most
-                        commonly used areas of BrewMan.
-                      </li>
-                      <li>
-                        Migrated the proprietary authentication system to
-                        Firebase and built admin tools in Node.js.
-                      </li>
-                      <li>
-                        Optimised frontend performance as the business scaled,
-                        refactoring and improving key areas of the codebase.
-                      </li>
-                      <li>
-                        Championed Vue 3 migration - I migrated a significant
-                        amount of our codebase's Vue 2 Options API and class
-                        components to the Composition API, ensuring a smooth
-                        transition while maintaining stability and backwards
-                        compatibility.
-                      </li>
-                      <li>
-                        Implemented a customisable dashboard, both frontend and
-                        backend, which became the new homepage of BrewMan.
-                      </li>
-                      <li>
-                        Mentored a new mid-level developer, helping them onboard
-                        and gain familiarity with the codebase and tech stack.
-                      </li>
-                      <li>
-                        Played a key role in migrating BrewMan's most
-                        widely-used component, our bespoke grid, to AG Grid.
-                      </li>
-                      <li>
-                        Implemented dark mode support, refactoring CSS across
-                        the entire application to ensure seamless theme
-                        switching.
-                      </li>
-                      <li>
-                        Championed Cypress E2E testing, improving test coverage
-                        and reliability.
-                      </li>
-                      <li>
-                        Enhanced our Progressive Web App used by delivery
-                        drivers, introducing new features and performance
-                        optimisations.
-                      </li>
-                    </ul>
-                  </div>
-
-                  <ul class="stack-line" aria-label="Tech stack">
-                    <li>Vue</li>
-                    <li>Vuetify</li>
-                    <li>TypeScript</li>
-                    <li>C#</li>
-                    <li>PostgreSQL</li>
-                    <li>GCP</li>
+              <details class="details">
+                <summary>View key modules</summary>
+                <div class="details__text">
+                  <ul class="bullet-list">
+                    <li>Software Quality and Testing</li>
+                    <li>Advanced Development</li>
+                    <li>Deep Learning</li>
+                    <li>Networks and Cyber Security</li>
+                    <li>Systems Design</li>
+                    <li>Data and Databases</li>
                   </ul>
                 </div>
-              </div>
+              </details>
             </article>
-          </div>
-        </section>
 
-        <section class="py-16 md:py-24">
-          <h2 class="section-title">Education</h2>
-
-          <div class="rail">
-            <article class="entry">
-              <span class="entry-node" aria-hidden="true"></span>
-
-              <div class="entry-grid">
-                <div class="entry-dates">
-                  <span>Sept 2019 &ndash; June 2023</span>
-                </div>
-
-                <div class="flex flex-col">
-                  <a
-                    class="entry-title"
-                    href="https://bournemouth.ac.uk"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Bournemouth University Link"
-                  >
-                    Bournemouth University
-                  </a>
-
-                  <p class="entry-role">BSc (Hons) Software Engineering</p>
-
-                  <p class="entry-dates-mobile">
-                    <span>Sept 2019 &ndash; June 2023</span>
+            <article class="record">
+              <div class="record__heading">
+                <div>
+                  <h3>
+                    <a
+                      href="https://barton-peveril.ac.uk"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Barton Peveril Sixth Form College
+                    </a>
+                  </h3>
+                  <p class="record__role">
+                    Computer Science, Maths and Economics
                   </p>
-
-                  <div class="badge">First Class</div>
-
-                  <div class="entry-body">
-                    <p>
-                      For my Final Year Project, I developed a web-based CRM
-                      application for sales representatives in the brewery and
-                      distillery industry, designed to integrate with BrewMan.
-                      The project was built based on requirements gathered from
-                      the sales team at Premier Systems.
-                    </p>
-                    <p>
-                      Bournemouth University selected my dissertation as a
-                      reference for future final-year students.
-                    </p>
-                    <p>Key modules studied:</p>
-                    <ul>
-                      <li>Software Quality and Testing</li>
-                      <li>Advanced Development</li>
-                      <li>Deep Learning</li>
-                      <li>Networks and Cyber Security</li>
-                      <li>Systems Design</li>
-                      <li>Data and Databases</li>
-                    </ul>
-                  </div>
                 </div>
+                <strong class="tag tag--purple">AAB</strong>
               </div>
-            </article>
 
-            <article class="entry">
-              <span class="entry-node" aria-hidden="true"></span>
-
-              <div class="entry-grid">
-                <div class="entry-dates">
-                  <span>Sept 2017 &ndash; June 2019</span>
+              <dl class="summary-list">
+                <div class="summary-list__row">
+                  <dt>Dates</dt>
+                  <dd>September 2017 to June 2019</dd>
                 </div>
-
-                <div class="flex flex-col">
-                  <a
-                    class="entry-title"
-                    href="https://barton-peveril.ac.uk"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Barton Peveril Link"
-                  >
-                    Barton Peveril Sixth Form College
-                  </a>
-
-                  <p class="entry-role">Computer Science, Maths, Economics</p>
-
-                  <p class="entry-dates-mobile">
-                    <span>Sept 2017 &ndash; June 2019</span>
-                  </p>
-
-                  <div class="badge">AAB</div>
-
-                  <div class="entry-body">
-                    <p>
-                      For my 2nd year computer science project, I built a
-                      maze-solving CLI application in VB.NET that implemented
-                      both Dijkstra's algorithm and the A* pathfinding
-                      algorithm.
-                    </p>
-                    <p>
-                      This application parsed an image of a maze, with a start
-                      and end point, and output the same image overlaid with the
-                      shortest path between the two points. It also rendered the
-                      path finding process in the console, step by step,
-                      animated in real time.
-                    </p>
-                  </div>
+                <div class="summary-list__row">
+                  <dt>Project</dt>
+                  <dd>
+                    A VB.NET maze-solving application using Dijkstra's and A*
+                    pathfinding algorithms.
+                  </dd>
                 </div>
-              </div>
-            </article>
-          </div>
-        </section>
-      </main>
+              </dl>
 
-      <footer
-        class="border-t border-seam py-10 text-center font-mono text-sm text-ash"
-      >
-        <span>&copy; 2026 Joe Brown</span>
-      </footer>
-    </div>
+              <p>
+                The application parsed a maze image and overlaid the shortest
+                route between two points. It also animated the pathfinding
+                process in the command line.
+              </p>
+            </article>
+          </section>
+
+          <a class="back-to-top" href="#main-content">Back to top</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="width-container">
+        <h2 class="site-footer__heading">Joe Brown</h2>
+        <ul class="site-footer__links">
+          <li><a href="https://github.com/joe4576">GitHub</a></li>
+          <li>
+            <a href="https://www.linkedin.com/in/joe-brown-282196213/"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
+        <div class="site-footer__meta">
+          <p>Built with HTML, CSS and JavaScript.</p>
+          <p>&copy; 2026 Joe Brown</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

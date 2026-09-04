@@ -27,13 +27,41 @@ const setCurrentJobTenure = () => {
 
     const { years, months } = calculateTimeSinceDateInclusive(startDate);
 
-    const monthString = months === 1 ? `${months} mo` : `${months} mos`;
-    const yearString = years === 1 ? `${years} yr` : `${years} yrs`;
+    const monthString = months === 1 ? `${months} month` : `${months} months`;
+    const yearString = years === 1 ? `${years} year` : `${years} years`;
 
     const duration = years > 0 ? `${yearString} ${monthString}` : monthString;
 
-    tenure.innerText = `(${duration})`;
+    tenure.innerText = duration;
+  });
+};
+
+const setupNavigation = () => {
+  const toggle = document.querySelector(".service-navigation__toggle");
+  const navigation = document.querySelector(".service-navigation__list");
+
+  if (!toggle || !navigation) {
+    return;
+  }
+
+  toggle.addEventListener("click", () => {
+    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+
+    toggle.setAttribute("aria-expanded", String(!isOpen));
+    toggle.innerText = isOpen ? "Menu" : "Close";
+    navigation.classList.toggle("is-open", !isOpen);
+  });
+
+  navigation.addEventListener("click", (event) => {
+    if (!(event.target instanceof HTMLAnchorElement)) {
+      return;
+    }
+
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.innerText = "Menu";
+    navigation.classList.remove("is-open");
   });
 };
 
 setCurrentJobTenure();
+setupNavigation();
