@@ -248,11 +248,20 @@ summary:focus {
 .profile {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "copy photo"
+    "lead lead";
   align-items: start;
-  gap: 40px;
+  column-gap: 40px;
+  row-gap: 20px;
+}
+
+.profile__copy {
+  grid-area: copy;
 }
 
 .profile__photo {
+  grid-area: photo;
   width: 150px;
   height: 150px;
   border: 1px solid var(--border);
@@ -295,6 +304,7 @@ h3 {
 }
 
 .lead {
+  grid-area: lead;
   margin: 0;
   font-size: 24px;
   line-height: 1.35;
@@ -546,7 +556,7 @@ h3 {
 
 @media (max-width: 760px) {
   body {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .width-container {
@@ -554,27 +564,24 @@ h3 {
   }
 
   .site-header__inner {
-    flex-wrap: wrap;
-    gap: 6px 12px;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    min-height: 64px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .site-header__brand {
-    width: 100%;
+    width: auto;
+    font-size: 26px;
   }
 
   .site-header__description {
-    margin-left: 50px;
-    padding-left: 0;
-    border-left: 0;
-    font-size: 16px;
+    display: none;
   }
 
   .service-navigation__inner {
     display: grid;
     grid-template-columns: 1fr auto;
-    min-height: 55px;
+    min-height: 50px;
   }
 
   .service-navigation__toggle {
@@ -603,9 +610,19 @@ h3 {
     box-shadow: none;
   }
 
+  .phase-banner {
+    gap: 8px;
+    padding: 10px 0;
+    font-size: 15px;
+  }
+
+  .phase-banner .tag {
+    font-size: 14px;
+  }
+
   .page-main {
-    padding-top: 30px;
-    padding-bottom: 55px;
+    padding-top: 25px;
+    padding-bottom: 48px;
   }
 
   .page-grid {
@@ -617,40 +634,104 @@ h3 {
   }
 
   .profile {
-    grid-template-columns: 1fr 90px;
-    gap: 20px;
+    grid-template-columns: minmax(0, 1fr) 72px;
+    column-gap: 15px;
+    row-gap: 16px;
   }
 
   .profile__photo {
-    width: 90px;
-    height: 90px;
+    width: 72px;
+    height: 72px;
   }
 
   .caption-xl {
-    font-size: 20px;
+    margin-bottom: 3px;
+    font-size: 19px;
   }
 
   h1 {
-    margin-bottom: 20px;
-    font-size: 36px;
+    margin-bottom: 15px;
+    font-size: 32px;
   }
 
   h2 {
-    font-size: 30px;
+    margin-bottom: 24px;
+    font-size: 27px;
   }
 
   h3 {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .lead {
-    grid-column: 1 / -1;
-    font-size: 21px;
+    font-size: 19px;
+  }
+
+  .inset-text {
+    margin: 26px 0;
+    padding: 10px 0 10px 15px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 42px;
+  }
+
+  .button,
+  .button:visited {
+    padding: 9px 14px 7px;
+  }
+
+  .button--secondary,
+  .button--secondary:visited {
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+    color: var(--link);
+    font-weight: 400;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.16em;
+  }
+
+  .button--secondary:hover {
+    background: transparent;
+    color: var(--link-hover);
+    text-decoration-thickness: 3px;
+  }
+
+  .content-section {
+    padding-top: 36px;
+  }
+
+  .content-section + .content-section {
+    margin-top: 48px;
+  }
+
+  .record + .record {
+    margin-top: 38px;
+    padding-top: 34px;
+  }
+
+  .record__heading {
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 18px;
+  }
+
+  .record__role {
+    font-size: 16px;
+  }
+
+  .summary-list {
+    margin-bottom: 20px;
   }
 
   .summary-list__row {
     display: block;
-    padding: 10px 0;
+    padding: 9px 0;
   }
 
   .summary-list dt,
@@ -662,9 +743,31 @@ h3 {
     margin-top: 3px;
   }
 
-  .record__heading {
-    flex-direction: column;
-    gap: 10px;
+  .summary-list .tag-list {
+    display: block;
+  }
+
+  .summary-list .tag-list .tag {
+    display: inline;
+    padding: 0;
+    background: transparent;
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  .summary-list .tag-list .tag:not(:last-child)::after {
+    content: ", ";
+  }
+
+  .details {
+    margin-top: 20px;
+  }
+
+  .back-to-top {
+    margin-top: 45px;
   }
 
   .site-footer__meta {
