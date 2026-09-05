@@ -641,7 +641,7 @@ h3 {
   }
 
   .profile {
-    grid-template-columns: minmax(0, 1fr) 72px;
+    grid-template-columns: minmax(0, 1fr) 92px;
     grid-template-areas:
       "copy photo"
       "lead lead"
@@ -657,8 +657,8 @@ h3 {
   }
 
   .profile__photo {
-    width: 82px;
-    height: 82px;
+    width: 92px;
+    height: 92px;
     border: 3px solid #ffffff;
     outline: 1px solid #8eb8dc;
   }
@@ -715,7 +715,7 @@ h3 {
 
   .button--secondary,
   .button--secondary:visited {
-    padding: 0;
+    padding: 9px 0 7px;
     border: 0;
     box-shadow: none;
     background: transparent;
