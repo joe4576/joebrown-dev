@@ -99,7 +99,7 @@ a {
 }
 
 .entry-title {
-  @apply text-xl font-semibold tracking-tight text-bone transition-colors hover:text-accent md:-mt-1 md:text-2xl;
+  @apply w-fit text-xl font-semibold tracking-tight text-bone transition-colors hover:text-accent hover:underline md:-mt-1 md:text-2xl;
 }
 
 .entry-role {
